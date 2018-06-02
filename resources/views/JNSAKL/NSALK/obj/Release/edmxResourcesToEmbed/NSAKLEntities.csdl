@@ -1,0 +1,849 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NSAKLEntities_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="uid" />
+    </Key>
+    <Property Name="uid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="64" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="roles" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="actions_list">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="action_by" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="action_item" Type="String" MaxLength="180" FixedLength="false" Unicode="false" />
+    <Property Name="action_remarks" Type="String" MaxLength="180" FixedLength="false" Unicode="false" />
+    <Property Name="date_assigned" Type="DateTime" Precision="3" />
+    <Property Name="date_due" Type="DateTime" Precision="3" />
+    <Property Name="date_completed" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="last_updated_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="deleted" Type="Boolean" />
+    <Property Name="deleted_by" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="appsetup">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="email_smtp_host" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="moderator_firstname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="moderator_lastname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="default_email_originator" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="default_email_recipient" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="developer_firstname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="developer_lastname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email_acknowledgement_text" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="email_welcome_text" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="marquee_text" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="timestamp" Type="DateTime" Precision="3" />
+    <Property Name="last_updated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="article">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="author_id" Type="Int32" />
+    <Property Name="subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="article1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="articles_authors">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="author_firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="author_lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="organisation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email_address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationName" />
+      <PropertyRef Name="LoweredApplicationName" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredApplicationName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="PasswordFormat" />
+      <PropertyRef Name="PasswordSalt" />
+      <PropertyRef Name="IsApproved" />
+      <PropertyRef Name="IsLockedOut" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="LastLoginDate" />
+      <PropertyRef Name="LastPasswordChangedDate" />
+      <PropertyRef Name="LastLockoutDate" />
+      <PropertyRef Name="FailedPasswordAttemptCount" />
+      <PropertyRef Name="FailedPasswordAttemptWindowStart" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptCount" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptWindowStart" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="PasswordSalt" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="Path" />
+      <PropertyRef Name="LoweredPath" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="Path" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="PageSettings" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="PageSettings" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="PageSettings" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="PageSettings" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="PropertyNames" />
+      <PropertyRef Name="PropertyValuesString" />
+      <PropertyRef Name="PropertyValuesBinary" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PropertyValuesString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PropertyValuesBinary" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="LoweredRoleName" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredRoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+      <PropertyRef Name="IsCurrentVersion" />
+    </Key>
+    <Property Name="Feature" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CompatibleSchemaVersion" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsCurrentVersion" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="LoweredUserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredUserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+      <PropertyRef Name="EventTimeUtc" />
+      <PropertyRef Name="EventTime" />
+      <PropertyRef Name="EventType" />
+      <PropertyRef Name="EventSequence" />
+      <PropertyRef Name="EventOccurrence" />
+      <PropertyRef Name="EventCode" />
+      <PropertyRef Name="EventDetailCode" />
+      <PropertyRef Name="MachineName" />
+    </Key>
+    <Property Name="EventId" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EventTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EventType" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EventSequence" Type="Decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventOccurrence" Type="Decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventCode" Type="Int32" Nullable="false" />
+    <Property Name="EventDetailCode" Type="Int32" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationVirtualPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="MachineName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RequestUrl" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="ExceptionType" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="auckland_local_boards">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="local_board" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="committee">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="committee_role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="year" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="coordinator">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="member_id" Type="Int32" />
+    <Property Name="area_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="last_updated" Type="DateTime" Precision="3" />
+    <Property Name="last_updated_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="deleted_group_members">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="group_id" Type="Int32" />
+    <Property Name="member_id" Type="Int32" />
+    <Property Name="street_contact_status" Type="Boolean" />
+    <Property Name="membership_status" Type="Boolean" />
+    <Property Name="last_updated" Type="DateTime" Precision="3" />
+    <Property Name="last_updated_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="date_deleted" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="deleted_members">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="firstname" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="middlename" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_unit_number" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_name" Type="String" MaxLength="180" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_suburb" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_postcode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_box_lobby_location" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_postcode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="phone_home" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="phone_work" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="phone_cell" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="email_address_default" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email_address_alternate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="signup_date" Type="DateTime" Precision="3" />
+    <Property Name="username" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="ip_address" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="180" FixedLength="false" Unicode="false" />
+    <Property Name="emergency_volunteering_status" Type="Boolean" />
+    <Property Name="mailing_list_status" Type="Boolean" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="birth_date" Type="DateTime" Precision="3" />
+    <Property Name="occupation" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="other_remarks" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated_date" Type="DateTime" Precision="3" />
+    <Property Name="last_updated_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="deleted_date" Type="DateTime" Precision="3" />
+    <Property Name="deleted_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="doc_types">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="doc_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="document">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="doc_title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="doc_type_id" Type="Int32" />
+    <Property Name="doc_author" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="doc_publisher" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="doc_date" Type="DateTime" Precision="3" />
+    <Property Name="doc_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="doc_remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="doc_path" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="uploaded_by" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="deleted_by" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="date_deleted" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="enquiries_log">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="datetimelog" Type="DateTime" Precision="3" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="message" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="enquiry_source" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="follow_up_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="follow_up_date" Type="DateTime" Precision="3" />
+    <Property Name="follow_up_remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="meeting_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="meeting_date" Type="DateTime" Precision="3" />
+    <Property Name="action_remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated_date" Type="DateTime" Precision="3" />
+    <Property Name="completed_date" Type="DateTime" Precision="3" />
+    <Property Name="completed_by" Type="Binary" MaxLength="50" FixedLength="false" />
+    <Property Name="initial_response" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="good_neighbour_despatch_log">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="subscriber_id" Type="Int32" />
+    <Property Name="issue_number" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="good_neighbour_subscribers">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="member_id" Type="Int32" />
+    <Property Name="subscriber_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="pdf_subscription" Type="Boolean" />
+    <Property Name="print_subscription" Type="Boolean" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="subscriber_postal_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="subscriber_email_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="group_members">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="group_id" Type="Int32" />
+    <Property Name="member_id" Type="Int32" />
+    <Property Name="street_contact_status" Type="Boolean" />
+    <Property Name="membership_status" Type="Boolean" />
+    <Property Name="last_updated" Type="DateTime" Precision="3" />
+    <Property Name="last_updated_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="group_setup_schedule">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="enquiry_received_date" Type="DateTime" Precision="3" />
+    <Property Name="contact_firstname" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="contact_lastname" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="contact_address_unit_number" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="contact_address_number" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="contact_address_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="contact_address_suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contact_address_postcode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="contact_home_phone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="contact_cell_phone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="contact_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="meeting_date" Type="DateTime" Precision="3" />
+    <Property Name="setup_by_username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="number_of_attendance" Type="Int32" />
+    <Property Name="setup_status" Type="Boolean" />
+    <Property Name="setup_remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="follow_up_status" Type="Boolean" />
+    <Property Name="follow_up_by_username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="follow_up_remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="created_date" Type="DateTime" Precision="3" />
+    <Property Name="updated_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="group">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="group_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="street_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="suburb" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="area_coordinator_id" Type="Int32" />
+    <Property Name="remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="setup_by" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="member">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="firstname" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="middlename" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_unit_number" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_name" Type="String" MaxLength="180" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_suburb" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_postcode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_box_lobby_location" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_postcode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="phone_home" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="phone_work" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="phone_cell" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="email_address_default" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email_address_alternate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="signup_date" Type="DateTime" Precision="3" />
+    <Property Name="username" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="ip_address" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="180" FixedLength="false" Unicode="false" />
+    <Property Name="emergency_volunteering_status" Type="Boolean" />
+    <Property Name="mailing_list_status" Type="Boolean" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="birth_date" Type="DateTime" Precision="3" />
+    <Property Name="occupation" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="other_remarks" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated_date" Type="DateTime" Precision="3" />
+    <Property Name="last_updated_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="members_backup">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="firstname" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="middlename" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_unit_number" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_name" Type="String" MaxLength="180" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_suburb" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="physical_address_postcode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_box_lobby_location" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="postal_address_postcode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="phone_home" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="phone_work" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="phone_cell" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="email_address_default" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email_address_alternate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="signup_date" Type="DateTime" Precision="3" />
+    <Property Name="username" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="ip_address" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="180" FixedLength="false" Unicode="false" />
+    <Property Name="emergency_volunteering_status" Type="Boolean" />
+    <Property Name="mailing_list_status" Type="Boolean" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="birth_date" Type="DateTime" Precision="3" />
+    <Property Name="occupation" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="other_remarks" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated_date" Type="DateTime" Precision="3" />
+    <Property Name="last_updated_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="nz_stats">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="suburb" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="households" Type="Int32" />
+    <Property Name="data_year" Type="Int32" />
+  </EntityType>
+  <EntityType Name="nzaddress_type">
+    <Key>
+      <PropertyRef Name="address_type_id" />
+    </Key>
+    <Property Name="address_type_id" Type="Int32" Nullable="false" />
+    <Property Name="address_type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="frequency" Type="Int32" />
+  </EntityType>
+  <EntityType Name="nzaddress">
+    <Key>
+      <PropertyRef Name="streetid" />
+    </Key>
+    <Property Name="streetid" Type="Int32" Nullable="false" />
+    <Property Name="address_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="address_type_id" Type="Int32" />
+    <Property Name="address_type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="address_range_from" Type="Int32" />
+    <Property Name="address_range_to" Type="Int32" />
+    <Property Name="suburb" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="postcode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="oddeven" Type="Int32" />
+    <Property Name="region_id" Type="Int32" />
+    <Property Name="auckland_city" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="nzregion">
+    <Key>
+      <PropertyRef Name="regionid" />
+    </Key>
+    <Property Name="regionid" Type="Int32" Nullable="false" />
+    <Property Name="region" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="param">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="param1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="param2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pobox_locations">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="box_lobby" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="suburb" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="postcode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="police_districts">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="police_district" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="community_constable" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="office_address" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="email_address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="nz_region_id" Type="Int32" />
+    <Property Name="news_page_url" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="updated_by" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="site_log">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="first_accessed" Type="DateTime" Precision="3" />
+    <Property Name="ip_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="last_accessed" Type="DateTime" Precision="3" />
+    <Property Name="number_of_visits" Type="Int64" />
+    <Property Name="remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="style">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="style_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="suburbs_by_local_boards">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="suburb" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="local_board_id" Type="Int32" />
+    <Property Name="police_district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="suspicious_vehicles">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="logdatetime" Type="DateTime" Precision="3" />
+    <Property Name="registration_number" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="vehicle_type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="vehicle_colour" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="vehicle_model" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="passengers" Type="Int16" />
+    <Property Name="activity" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="test_details">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="test_id" Type="Int32" />
+    <Property Name="testaasdas" Type="Binary" MaxLength="50" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="test1">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="test" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="useful_contacts">
+    <Key>
+      <PropertyRef Name="recid" />
+    </Key>
+    <Property Name="recid" Type="Int32" Nullable="false" />
+    <Property Name="service_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="service_phone_1" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="service_phone_2" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="service_email_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="service_email_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="service_url_1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="service_url_2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationName" />
+      <PropertyRef Name="LoweredApplicationName" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredApplicationName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_MembershipUsers">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="PasswordFormat" />
+      <PropertyRef Name="IsApproved" />
+      <PropertyRef Name="IsLockedOut" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="LastLoginDate" />
+      <PropertyRef Name="LastPasswordChangedDate" />
+      <PropertyRef Name="LastLockoutDate" />
+      <PropertyRef Name="FailedPasswordAttemptCount" />
+      <PropertyRef Name="FailedPasswordAttemptWindowStart" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptCount" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptWindowStart" />
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Profiles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DataSize" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Roles">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="LoweredRoleName" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredRoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Users">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="LoweredUserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredUserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_Paths">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="Path" />
+      <PropertyRef Name="LoweredPath" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="Path" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_Shared">
+    <Key>
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="DataSize" Type="Int32" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_User">
+    <Key>
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="DataSize" Type="Int32" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="NSAKLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="actions_list" EntityType="Self.actions_list" />
+    <EntitySet Name="appsetups" EntityType="Self.appsetup" />
+    <EntitySet Name="articles" EntityType="Self.article" />
+    <EntitySet Name="articles_authors" EntityType="Self.articles_authors" />
+    <EntitySet Name="aspnet_Applications" EntityType="Self.aspnet_Applications" />
+    <EntitySet Name="aspnet_Membership" EntityType="Self.aspnet_Membership" />
+    <EntitySet Name="aspnet_Paths" EntityType="Self.aspnet_Paths" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="Self.aspnet_PersonalizationAllUsers" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="Self.aspnet_PersonalizationPerUser" />
+    <EntitySet Name="aspnet_Profile" EntityType="Self.aspnet_Profile" />
+    <EntitySet Name="aspnet_Roles" EntityType="Self.aspnet_Roles" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="Self.aspnet_SchemaVersions" />
+    <EntitySet Name="aspnet_Users" EntityType="Self.aspnet_Users" />
+    <EntitySet Name="aspnet_UsersInRoles" EntityType="Self.aspnet_UsersInRoles" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="Self.aspnet_WebEvent_Events" />
+    <EntitySet Name="auckland_local_boards" EntityType="Self.auckland_local_boards" />
+    <EntitySet Name="committees" EntityType="Self.committee" />
+    <EntitySet Name="coordinators" EntityType="Self.coordinator" />
+    <EntitySet Name="deleted_group_members" EntityType="Self.deleted_group_members" />
+    <EntitySet Name="deleted_members" EntityType="Self.deleted_members" />
+    <EntitySet Name="doc_types" EntityType="Self.doc_types" />
+    <EntitySet Name="documents" EntityType="Self.document" />
+    <EntitySet Name="enquiries_log" EntityType="Self.enquiries_log" />
+    <EntitySet Name="good_neighbour_despatch_log" EntityType="Self.good_neighbour_despatch_log" />
+    <EntitySet Name="good_neighbour_subscribers" EntityType="Self.good_neighbour_subscribers" />
+    <EntitySet Name="group_members" EntityType="Self.group_members" />
+    <EntitySet Name="group_setup_schedule" EntityType="Self.group_setup_schedule" />
+    <EntitySet Name="groups" EntityType="Self.group" />
+    <EntitySet Name="members" EntityType="Self.member" />
+    <EntitySet Name="members_backup" EntityType="Self.members_backup" />
+    <EntitySet Name="nz_stats" EntityType="Self.nz_stats" />
+    <EntitySet Name="nzaddress_type" EntityType="Self.nzaddress_type" />
+    <EntitySet Name="nzaddresses" EntityType="Self.nzaddress" />
+    <EntitySet Name="nzregions" EntityType="Self.nzregion" />
+    <EntitySet Name="params" EntityType="Self.param" />
+    <EntitySet Name="pobox_locations" EntityType="Self.pobox_locations" />
+    <EntitySet Name="police_districts" EntityType="Self.police_districts" />
+    <EntitySet Name="site_log" EntityType="Self.site_log" />
+    <EntitySet Name="styles" EntityType="Self.style" />
+    <EntitySet Name="suburbs_by_local_boards" EntityType="Self.suburbs_by_local_boards" />
+    <EntitySet Name="suspicious_vehicles" EntityType="Self.suspicious_vehicles" />
+    <EntitySet Name="test_details" EntityType="Self.test_details" />
+    <EntitySet Name="test1" EntityType="Self.test1" />
+    <EntitySet Name="useful_contacts" EntityType="Self.useful_contacts" />
+    <EntitySet Name="vw_aspnet_Applications" EntityType="Self.vw_aspnet_Applications" />
+    <EntitySet Name="vw_aspnet_MembershipUsers" EntityType="Self.vw_aspnet_MembershipUsers" />
+    <EntitySet Name="vw_aspnet_Profiles" EntityType="Self.vw_aspnet_Profiles" />
+    <EntitySet Name="vw_aspnet_Roles" EntityType="Self.vw_aspnet_Roles" />
+    <EntitySet Name="vw_aspnet_Users" EntityType="Self.vw_aspnet_Users" />
+    <EntitySet Name="vw_aspnet_UsersInRoles" EntityType="Self.vw_aspnet_UsersInRoles" />
+    <EntitySet Name="vw_aspnet_WebPartState_Paths" EntityType="Self.vw_aspnet_WebPartState_Paths" />
+    <EntitySet Name="vw_aspnet_WebPartState_Shared" EntityType="Self.vw_aspnet_WebPartState_Shared" />
+    <EntitySet Name="vw_aspnet_WebPartState_User" EntityType="Self.vw_aspnet_WebPartState_User" />
+  </EntityContainer>
+</Schema>

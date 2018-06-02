@@ -69,7 +69,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <!-- <a href="{{ url('/home') }}">Home</a> -->
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
@@ -79,10 +79,40 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Holly's Page
+                    Hollybourneville dot com
                 </div>
 
+                <div class="links">
+                   <!--  <a href="https://laravel.com/docs">Documentation</a>
+                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://forge.laravel.com">Forge</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a> -->
+                </div>
             </div>
         </div>
     </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="{{ URL::asset('css/holly.css') }}"> -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+</head>
+<body>
+    <div class="logo">
+        <h1>Holly Bourneville</h1>
+        <!-- <img src="{{ $cat }}" alt=""> -->
+    </div>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>Contact</li>
+            <li>CV/About</li>
+            <li>Journal</li>
+        </ul>
+    </div>
+
+</body>
 </html>

@@ -1,0 +1,403 @@
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\NSALK.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\NSALK.pdb
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\Antlr3.Runtime.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.Core.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\EntityFramework.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\Microsoft.Data.Edm.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\Microsoft.Data.OData.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\Newtonsoft.Json.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Net.Http.Formatting.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Spatial.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Helpers.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Http.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Http.OData.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Http.WebHost.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Mvc.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Optimization.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Razor.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.WebPages.Deployment.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.WebPages.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.WebPages.Razor.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\WebGrease.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\WebMatrix.Data.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\WebMatrix.WebData.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\EntityFramework.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\Newtonsoft.Json.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Net.Http.Formatting.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Helpers.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Http.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Http.WebHost.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Mvc.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Razor.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.WebPages.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.WebPages.Deployment.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.WebPages.Razor.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\WebMatrix.Data.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\WebMatrix.WebData.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.Core.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Web.Http.OData.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\Microsoft.Data.Edm.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\Microsoft.Data.OData.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\System.Spatial.xml
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\de\System.Spatial.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\es\System.Spatial.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\fr\System.Spatial.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\it\System.Spatial.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\ja\System.Spatial.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\ko\System.Spatial.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\ru\System.Spatial.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\obj\Debug\NSALK.csprojResolveAssemblyReference.cache
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\obj\Debug\NSALK.dll
+C:\Users\almeera\Documents\Visual Studio 2012\Projects\NSALK\NSALK\obj\Debug\NSALK.pdb
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\NSALK.dll.config
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\NSALK.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\NSALK.pdb
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Antlr3.Runtime.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.Core.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\EntityFramework.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Data.Edm.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Data.OData.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Newtonsoft.Json.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Net.Http.Formatting.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Spatial.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Helpers.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.OData.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.WebHost.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Mvc.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Optimization.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Razor.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.Razor.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\WebGrease.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\WebMatrix.Data.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\WebMatrix.WebData.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\EntityFramework.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Newtonsoft.Json.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Net.Http.Formatting.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Helpers.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.WebHost.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Mvc.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Razor.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.Razor.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\WebMatrix.Data.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\WebMatrix.WebData.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.Core.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.OData.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Data.Edm.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Data.OData.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Spatial.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\de\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\es\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\fr\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\it\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\ja\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\ko\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\ru\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\obj\Debug\NSALK.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\obj\Debug\NSALK.pdb
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Cors.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Owin.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Cors.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.Owin.dll
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Cors.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.Owin.xml
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Web.Helpers.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\NSALK.dll.config
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\NSALK.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\NSALK.pdb
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Antlr3.Runtime.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.Core.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\EntityFramework.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Data.Edm.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Data.OData.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Cors.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Web.Helpers.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Newtonsoft.Json.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Owin.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Net.Http.Formatting.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Spatial.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Cors.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Helpers.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.OData.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.Owin.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.WebHost.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Mvc.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Optimization.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Razor.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.Razor.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\WebGrease.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\WebMatrix.Data.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\WebMatrix.WebData.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Cors.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Newtonsoft.Json.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Net.Http.Formatting.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Helpers.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.OData.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.Owin.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Http.WebHost.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Mvc.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.Razor.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Web.WebPages.Razor.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\EntityFramework.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.Core.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Data.Edm.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\Microsoft.Data.OData.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\System.Spatial.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\WebMatrix.Data.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\WebMatrix.WebData.xml
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\de\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\es\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\fr\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\it\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\ja\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\ko\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\ru\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\obj\Debug\NSALK.csprojResolveAssemblyReference.cache
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\obj\Debug\NSALK.dll
+C:\Users\Srikanth\Desktop\T\New Directory\NSALK - 8-2-18\NSALK\NSALK\obj\Debug\NSALK.pdb
+C:\Users\Srikanth\Desktop\NSALK - 8-2-18\NSALK\NSALK\obj\Debug\NSALK.csprojResolveAssemblyReference.cache
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\NSALK.dll.config
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\NSALK.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\NSALK.pdb
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Antlr3.Runtime.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.AspNet.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.Core.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.OAuth.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.OpenId.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\EntityFramework.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Data.Edm.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Data.OData.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.Cors.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.Security.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Web.Helpers.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Web.Infrastructure.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Newtonsoft.Json.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Owin.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Net.Http.Formatting.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Spatial.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Cors.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Helpers.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Http.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Http.OData.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Http.Owin.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Http.WebHost.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Mvc.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Optimization.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Razor.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.WebPages.Deployment.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.WebPages.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.WebPages.Razor.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\WebGrease.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\WebMatrix.Data.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\WebMatrix.WebData.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.Cors.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.Security.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Newtonsoft.Json.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Net.Http.Formatting.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Helpers.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Http.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Http.OData.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Http.Owin.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Http.WebHost.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Mvc.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.Razor.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.WebPages.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.WebPages.Deployment.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Web.WebPages.Razor.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\EntityFramework.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.AspNet.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.Core.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.OAuth.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.OpenId.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Data.Edm.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\Microsoft.Data.OData.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\System.Spatial.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\WebMatrix.Data.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\WebMatrix.WebData.xml
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\de\Microsoft.Data.OData.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\es\Microsoft.Data.OData.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\it\Microsoft.Data.OData.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\de\System.Spatial.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\es\System.Spatial.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\fr\System.Spatial.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\it\System.Spatial.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\ja\System.Spatial.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\ko\System.Spatial.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\ru\System.Spatial.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\zh-Hans\System.Spatial.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\bin\zh-Hant\System.Spatial.resources.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\obj\Debug\NSALK.csprojResolveAssemblyReference.cache
+C:\Development\Srikanth\Source\NSAKL\NSALK\obj\Debug\NSALK.dll
+C:\Development\Srikanth\Source\NSAKL\NSALK\obj\Debug\NSALK.pdb

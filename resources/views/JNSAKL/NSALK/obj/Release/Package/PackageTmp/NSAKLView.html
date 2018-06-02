@@ -1,0 +1,1692 @@
+﻿<!DOCTYPE html>
+<html>
+<head><title> Neighbourhood Support Auckland Region</title></head>
+<!--<head>-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<link rel="shortcut icon" type="image/x-icon" href="Images/NSAKL_logo.jpg" />
+    <script src="Scripts/angular.min.js"></script>
+    <!--<script src="js/jquery-1.10.2.min.js"></script>-->
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCm4r9LfhzraDaPeFUJhc7cKPA0-Sw8IpE" type="text/javascript"></script>
+<link href="js/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<style>
+
+    #myscModal {
+  padding-top:20%;
+}
+
+    input[type="checkbox"] {
+    cursor: pointer;
+}
+
+    #tbContacts tr,#tbGroups tr,#tbCoordinators tr {
+        cursor:pointer;
+    }
+    #myaccountModalCPassword td {
+        color:black;
+        text-align: left;
+        
+         border: 0px solid #ddd;
+    padding: 8px;
+
+    }
+    #myaccountModalProfile td,#myaccountModalProfile td p  {
+            /*border: 5px solid #fff;*/            
+            color:black;
+            text-align: left;
+
+        }   
+            /*editprofile*/
+        .editprofilecontainer {
+            height: auto;
+            overflow: hidden;
+        }
+        .editprofileright {
+            width: 50%;
+            float: right;
+        }
+        .editprofileleft {
+            float: none;
+            width: auto;
+            overflow: hidden;
+        }
+ 
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            color: white !important;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #000000;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #000000;
+            color: white;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px; /* for vertical scrollbars */
+            height: 12px; /* for horizontal scrollbars */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgb(0, 0, 0);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #656262;
+        }
+
+        body {
+            /*font-size: 1em !important;*/
+            font-family: Arial !important;
+        }
+    .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+    body {
+  background: #e5fff5;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 94%;
+  /*max-width: 1100px;*/
+  font-family: helvetica, sans-serif;
+}
+.content {
+  position: relative;
+  padding-top: 80px;
+}
+.content p {
+  margin-bottom: 10px;
+}
+#header {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: #222;
+  color: white;
+}
+#header h1 {
+  top: 0px;
+  margin: 0px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+#nav {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  height: 60px;
+}
+#nav ul li {
+  float: left;
+  list-style: none;
+}
+#nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+@media (max-width: 599px) {
+  #header .container {
+    width: 100%;
+  }
+  #header h1 {
+    padding-left: 3%;
+  }
+  #nav {
+    width: 100%;
+    top: 60px;
+  }
+  #nav:before {
+    content: '\2630';
+    display: block;
+    position: absolute;
+    right: 3%;
+    top: -50px;
+    line-height: 40px;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+  #nav ul {
+    background: #222;
+    width: 100%;
+    margin: 0px;
+  }
+  #nav ul li {
+    float: none;
+  }
+  #nav ul li a {
+    padding: 10px 3%;
+    line-height: 20px;
+    border-top: 1px solid #333;
+  }
+}
+
+
+</style>
+    <style>
+         .sk-circle {
+            margin: 100px auto;
+            width: 40px;
+            height: 200px;
+            position: relative;
+        }
+
+            .sk-circle .sk-child {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+                .sk-circle .sk-child:before {
+                    content: '';
+                    display: block;
+                    margin: 0 auto;
+                    width: 15%;
+                    height: 15%;
+                    background-color: #fff;
+                    border-radius: 100%;
+                    -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+                    animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+                }
+
+            .sk-circle .sk-circle2 {
+                -webkit-transform: rotate(30deg);
+                -ms-transform: rotate(30deg);
+                transform: rotate(30deg);
+            }
+
+            .sk-circle .sk-circle3 {
+                -webkit-transform: rotate(60deg);
+                -ms-transform: rotate(60deg);
+                transform: rotate(60deg);
+            }
+
+            .sk-circle .sk-circle4 {
+                -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+
+            .sk-circle .sk-circle5 {
+                -webkit-transform: rotate(120deg);
+                -ms-transform: rotate(120deg);
+                transform: rotate(120deg);
+            }
+
+            .sk-circle .sk-circle6 {
+                -webkit-transform: rotate(150deg);
+                -ms-transform: rotate(150deg);
+                transform: rotate(150deg);
+            }
+
+            .sk-circle .sk-circle7 {
+                -webkit-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+
+            .sk-circle .sk-circle8 {
+                -webkit-transform: rotate(210deg);
+                -ms-transform: rotate(210deg);
+                transform: rotate(210deg);
+            }
+
+            .sk-circle .sk-circle9 {
+                -webkit-transform: rotate(240deg);
+                -ms-transform: rotate(240deg);
+                transform: rotate(240deg);
+            }
+
+            .sk-circle .sk-circle10 {
+                -webkit-transform: rotate(270deg);
+                -ms-transform: rotate(270deg);
+                transform: rotate(270deg);
+            }
+
+            .sk-circle .sk-circle11 {
+                -webkit-transform: rotate(300deg);
+                -ms-transform: rotate(300deg);
+                transform: rotate(300deg);
+            }
+
+            .sk-circle .sk-circle12 {
+                -webkit-transform: rotate(330deg);
+                -ms-transform: rotate(330deg);
+                transform: rotate(330deg);
+            }
+
+            .sk-circle .sk-circle2:before {
+                -webkit-animation-delay: -1.1s;
+                animation-delay: -1.1s;
+            }
+
+            .sk-circle .sk-circle3:before {
+                -webkit-animation-delay: -1s;
+                animation-delay: -1s;
+            }
+
+            .sk-circle .sk-circle4:before {
+                -webkit-animation-delay: -0.9s;
+                animation-delay: -0.9s;
+            }
+
+            .sk-circle .sk-circle5:before {
+                -webkit-animation-delay: -0.8s;
+                animation-delay: -0.8s;
+            }
+
+            .sk-circle .sk-circle6:before {
+                -webkit-animation-delay: -0.7s;
+                animation-delay: -0.7s;
+            }
+
+            .sk-circle .sk-circle7:before {
+                -webkit-animation-delay: -0.6s;
+                animation-delay: -0.6s;
+            }
+
+            .sk-circle .sk-circle8:before {
+                -webkit-animation-delay: -0.5s;
+                animation-delay: -0.5s;
+            }
+
+            .sk-circle .sk-circle9:before {
+                -webkit-animation-delay: -0.4s;
+                animation-delay: -0.4s;
+            }
+
+            .sk-circle .sk-circle10:before {
+                -webkit-animation-delay: -0.3s;
+                animation-delay: -0.3s;
+            }
+
+            .sk-circle .sk-circle11:before {
+                -webkit-animation-delay: -0.2s;
+                animation-delay: -0.2s;
+            }
+
+            .sk-circle .sk-circle12:before {
+                -webkit-animation-delay: -0.1s;
+                animation-delay: -0.1s;
+            }
+
+        @-webkit-keyframes sk-circleBounceDelay {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        @keyframes sk-circleBounceDelay {
+            0%, 80%, 100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            40% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        .gridStyle {
+            border: 1px solid rgb(212,212,212);
+            width: 400px;
+            height: 300px;
+        }
+        /* The Modal (background) */
+        .modal {
+            /*display: none;*/ /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 5; /* Sit on top */
+            padding-top: 30px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+        }
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0;
+            }
+
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        body {
+            font-family: Arial;
+        }
+        button {
+            cursor:pointer;
+        }
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+            /* Style the buttons inside the tab */
+            .tab button {
+                background-color: inherit;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                transition: 0.3s;
+                font-size: 17px;
+                width: 16.66%;
+            }
+
+                /* Change background color of buttons on hover */
+                .tab button:hover {
+                    background-color: #ddd;
+                }
+
+                /* Create an active/current tablink class */
+                .tab button.active {
+                    background-color: #ccc;
+                }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        /* Style the close button */
+        .topright {
+            float: right;
+            cursor: pointer;
+            font-size: 28px;
+        }
+
+            .topright:hover {
+                color: red;
+            }
+    </style>
+    <script>
+        function openTab(tabName) {
+            if (tabName == "Contacts") {
+                angular.element($("#Map")).scope().getcontactsdata();
+            }
+            if (tabName == "Groups") {
+                angular.element($("#Map")).scope().getgroupsdata();
+            }
+            if (tabName == "Services") {
+                angular.element($("#Map")).scope().getagenciesdata();
+            }
+            if (tabName == "Map") {
+                angular.element($("#Map")).scope().getmapdata();
+            }
+            if (tabName == "Coordinators") {
+                angular.element($("#Map")).scope().getcoordinatorsdata();
+            }
+            if (tabName == "Documents") {
+                angular.element($("#Map")).scope().getdocumentsdata();
+            }
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            $('button[class="tablinks"][onclick*=' + tabName + ']').addClass('active');
+        }
+       
+        var app = angular.module('itemsviewApp1', []);
+        app.controller('itemsviewCtrl1',['$scope', '$http', function ($scope, $http) {
+            $scope.getcontactsdata = function () {
+                //$('#tbContacts').resize();
+                //if (sessionStorage.selectedGroup) { //sessionStorage.getItem('GetContactsData').length < 1 || 
+                    $http.defaults.headers.post["Content-Type"] = "application/xml";
+                    $http.defaults.headers.post["Authorization"] = "Bearer " + sessionStorage.getItem('access_token');
+                    
+                    var url = "/api/GetContacts";
+                    var xmlrequest = "<SystemDataMessage><Groups><Group></Group></Groups></SystemDataMessage>";
+                    if(sessionStorage.selectedGroup)
+                    if(sessionStorage.selectedGroup.length>0)
+                    {
+                        url = "/api/GetContactsAdmin";
+                        xmlrequest = "<SystemDataMessage><Contacts><Contact><SelectedGroup>"+sessionStorage.selectedGroup+"</SelectedGroup></Contact></Contacts></SystemDataMessage>";
+                    }
+                    //$('#myModalspin').show();
+                    $http.post(url, xmlrequest).success(function (data, status, headers, config) {
+                        $scope.getcontactsData = data.itemsField;
+                        $scope.getcontactsData = $scope.getcontactsData[0];
+                        $scope.getcontactsData = $scope.getcontactsData.contactField;
+                        sessionStorage.setItem('GetContactsData', '12');
+                        var tabst, phone = "";
+                        //var tbareaContactscontactIDs = [];
+                        tabst = "<table id='tbContacts' class='display responsive' cellspacing='0' width='100%'><thead><tr><th>Select</th><th>Name</th><th>Phone</th><th>Email Address</th><th>User Name</th><th>Last Updated</th></tr></thead><tbody>";
+                        for (var i = 0, l = $scope.getcontactsData.length; i < l; i++) {
+                            var d = $scope.getcontactsData[i];
+                            if (d["recidField"] || d["recidField"]) {
+                                var name = (d["firstnameField"]?d["firstnameField"]:"") + " " + (d["middlenameField"]?d["middlenameField"]:"") + " " + (d["lastnameField"]?d["lastnameField"]:"");
+                                if (sessionStorage.selectedGroup)
+                                    tabst += "<tr id=" + d["recidField"] + "><td><input type='checkbox'' checked value=''>Select<td>" + name + "</td><td>" + (d["phone_cellField"] ? d['phone_cellField'] : "") + "</td><td>" + (d['email_address_defaultField'] ? d['email_address_defaultField'] : "") + "</td><td>" + (d['usernameField'] ? d['usernameField'] : "") + "</td><td>" + (d['last_updated_dateField'] ? d['last_updated_dateField'] : "") + "</td></tr>";
+                                else
+                                tabst += "<tr id=" + d["recidField"] + "><td><input type='checkbox'' value=''>Select<td>" + name + "</td><td>" + (d["phone_cellField"] ? d['phone_cellField'] : "") + "</td><td>" + (d['email_address_defaultField'] ? d['email_address_defaultField'] : "") + "</td><td>" + (d['usernameField'] ? d['usernameField'] : "") + "</td><td>" + (d['last_updated_dateField'] ? d['last_updated_dateField'] : "") + "</td></tr>";
+                            }
+                        }
+                        tabst += "</tbody></table>";
+                        $('#divContacts').html(tabst);
+
+                        var table = $('#tbContacts').DataTable({
+                            "scrollY": 360,
+                            "scrollX": true,
+                            "bInfo": true,
+                            dom: 'Blfrtip',
+                            "lengthMenu": [50, 100]
+                            //"pagingType": "full_numbers",
+                            //"ordering": true ,
+                            //"autoWidth": true
+                        });
+
+ //                       $('#container').css( 'display', 'block' );
+                        // table.columns.adjust().draw();
+
+                        $('#myModalspin').hide();
+                        
+                        $('#tbContacts tbody').on( 'click', 'tr input[type="checkbox"]', function ($scope) {
+
+                            //$('#tbContacts tbody tr').removeClass('selected');
+                            
+                            var $el = $(this).closest('tr').toggleClass('selected');
+                            if ($el.hasClass('selected')) {
+                                $("#tbContacts tr").not(this.closest('tr')).removeClass('selected');
+                                $('#tbContacts tbody tr input[type="checkbox"]').prop('checked',false);
+                                $('#tbContacts tbody tr.selected').find('input[type="checkbox"]').prop('checked',true);
+
+                                sessionStorage.setItem('selectedContact',$('#tbContacts tbody tr.selected').attr('id'));
+                                sessionStorage.setItem('selectedContactName',$('#tbContacts tbody tr.selected td:eq(1)').html());
+
+                                //$("#myscModal").fadeIn('slow');
+                                $('#pselectedContact').html($('#tbContacts tbody tr.selected td:eq(1)').html()+' Selected');
+                                $("#divSelectedContact").html('Selected Contact: '+$('#tbContacts tbody tr.selected td:eq(1)').html()+'   <a href="#" class="ancCleardivSelectedContact">Clear Filter</a>');
+
+                                //setTimeout( function () { 
+                                    // $("#myscModal").fadeOut('slow');
+                                //}, 700 // milliseconds delay
+                                //);
+
+                                $('.ancCleardivSelectedContact').unbind().click( function () {
+                                    clearitems();
+                                } );
+                            }
+                            else
+                            {
+                                clearitems();
+                            }
+                        } );
+                        //$('#myscModal .close').click( function () {
+                        //    $('#myscModal').hide();
+                        //} );
+                        //$('.ancSelectedContact').click( function () {
+                        //    alert( table.rows('.selected').data().length +' row(s) selected' );
+                        //} );
+                        $('#myModalspin').hide();
+                        //if(!sessionStorage.selectedGroup)
+                        //    clearitems();
+                        
+                    }).error(function (data, status, headers, config) {
+
+                    }).finally(function () {
+                        //sessionStorage.setItem('customerareaID', '');
+                    });
+                //}
+            };
+            function clearitems(){
+                
+                //$('table tbody tr').removeClass('selected');
+                //$('table tbody tr input[type="checkbox"]').prop('checked',false);
+                //$("#divSelectedContact").html('');
+                sessionStorage.selectedContact='';
+                sessionStorage.selectedContactName='';
+                sessionStorage.selectedCoordinator='';
+                window.location.reload();
+            }
+            $scope.getgroupsdata = function () {
+                $http.defaults.headers.post["Content-Type"] = "application/xml";
+                $http.defaults.headers.post["Authorization"] = "Bearer " + sessionStorage.getItem('access_token');
+                var url = "/api/GetGroups";
+                var xmlrequest = "<SystemDataMessage><Groups><Group></Group></Groups></SystemDataMessage>";
+                if(sessionStorage.selectedContact)
+                if(sessionStorage.selectedContact.length>0)
+                {
+                    url = "/api/GetGroupsAdmin";
+                    xmlrequest = "<SystemDataMessage><Groups><Group><selectedid>"+sessionStorage.selectedContact+"</selectedid></Group></Groups></SystemDataMessage>";
+                }
+                $('#myModalspin').show();
+                $http.post(url, xmlrequest).success(function (data, status, headers, config) {
+                    $scope.getgroupsData = data.itemsField;
+                    $scope.getgroupsData = $scope.getgroupsData[0];
+                    $scope.getgroupsData = $scope.getgroupsData.groupField;
+
+                    var tabst, phone = "";
+                    tabst = "<table id='tbGroups' class='display' cellspacing='0' width='100%'><thead><tr><th align='left'>Select</th><th align='left'>Name</th><th align='left'>Area Coordinator</th><th align='left'>Street Name</th><th align='left'>Suburb</th><th align='left'>Last Updated</th></tr></thead><tbody>";
+                    for (var i = 0, l = $scope.getgroupsData.length; i < l; i++) {
+                        var d = $scope.getgroupsData[i];
+                        if (d["recidField"] || d["recidField"])
+                            var className='';
+                        if(d["selectedgroupField"] =='true'){
+                            className="selected";
+                            tabst += "<tr class='"+className+"' id='" + d["recidField"] + "'><td><input type='checkbox'' checked='true' value=''>Select<td>" + (d["group_nameField"] ? d['group_nameField'] : "") + "</td><td id='"+d["area_coordinator_idField"]+"'>" + (d["area_coordinator_nameField"] ? d['area_coordinator_nameField'] : "") + "</td><td>" + (d['street_nameField'] ? d['street_nameField'] : "") + "</td><td>" + (d['suburbField'] ? d['suburbField'] : "") + "</td><td>" + (d['last_updatedField'] ? d['last_updatedField'] : "") + "</td></tr>";
+                        }
+                        else
+                        {
+                            tabst += "<tr class='"+className+"' id='" + d["recidField"] + "'><td><input type='checkbox'' value=''>Select<td>" + (d["group_nameField"] ? d['group_nameField'] : "") + "</td><td id='"+d["area_coordinator_idField"]+"'>" + (d["area_coordinator_nameField"] ? d['area_coordinator_nameField'] : "") + "</td><td>" + (d['street_nameField'] ? d['street_nameField'] : "") + "</td><td>" + (d['suburbField'] ? d['suburbField'] : "") + "</td><td>" + (d['last_updatedField'] ? d['last_updatedField'] : "") + "</td></tr>";
+                        }
+                    }
+                    tabst += "</tbody></table>";
+                    $('#divGroups').html(tabst);
+
+                    $('#tbGroups').DataTable({
+                        "scrollY": 360,
+                        "scrollX": true,
+                        "bInfo": true,
+                        dom: 'Blfrtip',
+                        "lengthMenu": [50, 100],
+                        "pagingType": "full_numbers",
+                        "ordering": true 
+                    });
+                    $(".ancModfiyCoordinator").click(function( event ) {
+                        sessionStorage.selectedGroup=$(this).closest('tr').find("td:eq(1)").html();
+                        openTab('Coordinators');
+                        event.preventDefault();
+                        return false;
+                    });
+                    $('#tbGroups tbody').on( 'click', 'tr input[type="checkbox"]', function () {
+                        var $el = $(this).closest('tr').toggleClass('selected');
+                        var cid = sessionStorage.selectedContact;
+                        var gid=$(this).closest('tr').attr('id');
+                        if(cid && gid)
+                            angular.element($("#Map")).scope().updategroupsdata(cid,gid);
+                        if ($el.hasClass('selected')) {
+                            //$('#pselectedContact').html('Added '+sessionStorage.selectedContactName+' to Group: '+$(this).find("td:eq(1)").html());
+                            $('#tbGroups tbody tr input[type="checkbox"]').prop('checked',false);
+                            $('#tbGroups tbody tr.selected').find('input[type="checkbox"]').prop('checked',true);
+                            
+                            if(!cid) { 
+                                $("#divSelectedContact").html('Selected Group: '+$(this).closest('tr').find('td:eq(1)').html()+'   <a href="#" class="ancCleardivSelectedGroup">Clear Filter</a>');
+                                sessionStorage.selectedGroup=$(this).closest('tr').attr('id');
+                                sessionStorage.selectedCoordinator=$(this).closest('tr').find('td:eq(2)').attr('id');
+                            }
+                        }
+                        else
+                        {
+                            cleargroupitems();
+                            //$('#pselectedContact').html('Removed '+sessionStorage.selectedContactName+' from Group: '+$(this).find("td:eq(1)").html());
+                            //$('#tbGroups tbody tr').removeClass('selected');                            
+                        }
+
+
+                        $('.ancCleardivSelectedGroup').unbind().click( function () {
+                            cleargroupitems();
+                        } );
+
+
+                                // $("#myscModal").fadeIn('slow');
+                                //setTimeout( function () { 
+                                //      $("#myscModal").fadeOut('slow');
+                                //   }, 700 // milliseconds delay
+                                //);
+                    } );                    
+                    $('#myModalspin').hide();
+                }).error(function (data, status, headers, config) {
+                    $scope.getgroupsData = data.itemsField;
+                }).finally(function () {
+                });
+            };
+            function cleargroupitems(){
+                //$(this).closest('tr').find('input[type="checkbox"]').prop('checked',false);
+                
+                //$('table tbody tr').removeClass('selected');
+                //$('table tbody tr input[type="checkbox"]').prop('checked',false);
+                //$("#divSelectedContact").html('');
+                sessionStorage.selectedContact='';
+                sessionStorage.selectedContactName='';
+                sessionStorage.selectedGroup='0';
+                sessionStorage.selectedCoordinator='';
+                window.location.reload();
+                //$('table tbody tr').removeClass('selected');
+                //$('table tbody tr input[type="checkbox"]').prop('checked',false);
+                //$("#divSelectedContact").html('');
+                //sessionStorage.selectedContact='';
+                //sessionStorage.selectedContactName='';
+            }
+            $scope.getdocumentsdata = function () {
+                $http.defaults.headers.post["Content-Type"] = "application/xml";
+                $http.defaults.headers.post["Authorization"] = "Bearer " + sessionStorage.getItem('access_token');
+                var url = "/api/GetDocuments";
+                var xmlrequest = "<SystemDataMessage><Documents><Document></Document></Documents></SystemDataMessage>";
+                $('#myModalspin').show();
+                $http.post(url, xmlrequest).success(function (data, status, headers, config) {
+                    $scope.getdocumentsData = data.itemsField;
+                    $scope.getdocumentsData = $scope.getdocumentsData[0];
+                    $scope.getdocumentsData = $scope.getdocumentsData.documentField;
+                    var tabst, phone = "";
+                    tabst = "<table id='tbGetDocuments' class='display' cellspacing='0' width='100%'><thead><tr><th align='left'>ID</th><th align='left'>Title</th><th align='left'>Author</th><th align='left'>Date</th></tr></thead><tbody>";
+                    for (var i = 0, l = $scope.getdocumentsData.length; i < l; i++) {
+                        var d = $scope.getdocumentsData[i];
+                        if(d['doc_pathField'])
+                            tabst += "<tr id=" + d["recidField"] + "><td>" + (i+1) + "<td><a target='_blank' href='http://nsakl.org.nz"+d["doc_pathField"]+"'>" + (d["doc_titleField"] ? d['doc_titleField'] : "") + "</a></td><td>" + (d["doc_authorField"] ? d['doc_authorField'] : "") + "</td><td>" + (d['doc_dateField'] ? d['doc_dateField'] : "") + "</td></tr>";
+                    }
+                    tabst += "</tbody></table>";
+                    $('#divDocuments').html(tabst);
+                    $('#tbGetDocuments').DataTable({
+                        "scrollY": 360,
+                        "scrollX": true,
+                        "bInfo": true,
+                        dom: 'Blfrtip',
+                        "lengthMenu": [50, 100],
+                        "pagingType": "full_numbers"
+                    });
+                    $('#myModalspin').hide();
+                }).error(function (data, status, headers, config) {
+                    $scope.updategroupsData = data.itemsField;
+                }).finally(function () {
+                });
+            };
+            $scope.updategroupsdata = function (contactid,groupid) {
+                $http.defaults.headers.post["Content-Type"] = "application/xml";
+                $http.defaults.headers.post["Authorization"] = "Bearer " + sessionStorage.getItem('access_token');
+                var url = "/api/UpdateGroupsAdmin";
+                var xmlrequest = "<SystemDataMessage><Groups><Group></Group></Groups></SystemDataMessage>";
+                if(sessionStorage.selectedContact.length>0)
+                {
+                    url = "/api/UpdateGroupsAdmin";
+                    xmlrequest = "<SystemDataMessage><Groups><Group><selectedid>"+contactid+"</selectedid><selectedgroupid>"+groupid+"</selectedgroupid></Group></Groups></SystemDataMessage>";
+                }
+                $('#myModalspin').show();
+                $http.post(url, xmlrequest).success(function (data, status, headers, config) {
+                    $scope.updategroupsData = data.itemsField;
+                    $scope.updategroupsData = $scope.updategroupsData[0];
+                    $scope.updategroupsData = $scope.updategroupsData.groupField;
+                    $('#myModalspin').hide();
+                }).error(function (data, status, headers, config) {
+                    $scope.updategroupsData = data.itemsField;
+                }).finally(function () {
+                });
+            };
+            $scope.getothercontactsdata = function () {
+                $('#myModalspin').show();
+                //if (!$scope.getothercontactsData) {
+                    $http.defaults.headers.post["Content-Type"] = "application/xml";
+                    $http.defaults.headers.post["Authorization"] = "Bearer " + sessionStorage.getItem('access_token');
+                    $http.post('/api/GetOtherContacts', '<SystemDataMessage><Groups><Group></Group></Groups></SystemDataMessage>').success(function (data, status, headers, config) {
+                        $scope.getothercontactsData = data.itemsField;
+                        $scope.getothercontactsData = $scope.getothercontactsData[0];
+                        $scope.getothercontactsData = $scope.getothercontactsData.contactField;
+                        var tabst, phone = "";
+                        tabst = "<table id='tbOtherContacts' class='display' cellspacing='0' width='100%'><thead><tr><th align='left'>Rec ID</th><th align='left'>Name</th><th align='left'>Phone</th><th align='left'>Email Address</th><th align='left'>User Name</th><th align='left'>Last Updated</th></tr></thead><tbody>";
+                        for (var i = 0, l = $scope.getothercontactsData.length; i < l; i++) {
+                            var d = $scope.getothercontactsData[i];
+                            if (d["recidField"] || d["recidField"])
+                                var name = d["firstnameField"] + " " + d["middlenameField"] + " " + d["lastnameField"];
+                            tabst += "<tr id=" + d["recidField"] + "><td>" + (d["recidField"] ? d['recidField'] : "") + "<td>" + name + "</td><td>" + (d["phone_cellField"] ? d['phone_cellField'] : "") + "</td><td>" + (d['email_address_defaultField'] ? d['email_address_defaultField'] : "") + "</td><td>" + (d['usernameField'] ? d['usernameField'] : "") + "</td><td>" + (d['last_updated_dateField'] ? d['last_updated_dateField'] : "") + "</td></tr>";
+                        }
+                        tabst += "</tbody></table>";
+                        $('#divServices').html(tabst);
+                        $('#tbOtherContacts').DataTable({
+                            "scrollY": 360,
+                            "scrollX": true,
+                            "bInfo": true,
+                            dom: 'Blfrtip',
+                            "lengthMenu": [50, 100],
+                            "pagingType": "full_numbers"
+                        });
+                        $('#myModalspin').hide();
+                    }).error(function (data, status, headers, config) {
+                        var temp = data;
+                    }).finally(function () {
+                    });
+                //}
+            };
+            $scope.getagenciesdata = function () {
+                $http.defaults.headers.post["Content-Type"] = "application/xml";
+                $http.defaults.headers.post["Authorization"] = "Bearer " + sessionStorage.getItem('access_token');
+                $http.post('/api/GetAgencies', '<SystemDataMessage><Services><Service></Service></Services></SystemDataMessage>').success(function (data, status, headers, config) {
+
+                    $scope.getagencyData = data.itemsField;
+                    $scope.getagencyData = $scope.getagencyData[0];
+                    $scope.getagencyData = $scope.getagencyData.serviceField;
+
+                        var tabst, phone = "";
+                        tabst = "<table id='tbServices' class='display' cellspacing='0' width='100%'><thead><tr><th align='left'>Service Name</th><th align='left'>Phone1</th><th align='left'>Phone2</th><th align='left'>Email1</th><th align='left'>Email2</th><th align='left'>URL1</th><th align='left'>URL2</th></tr></thead><tbody>";
+                        for (var i = 0, l = $scope.getagencyData.length; i < l; i++) {
+                            var d = $scope.getagencyData[i];
+                               
+                            tabst += "<tr id=" + d["recidField"] + "><td>" + (d["service_nameField"] ? d['service_nameField'] : "") + "<td>" + (d["service_phone_1Field"] ? d['service_phone_1Field'] : "") + "</td><td>" + (d['service_phone_2Field'] ? d['service_phone_2Field'] : "") + "</td><td>" + (d['service_email_1Field'] ? d['service_email_1Field'] : "") + "</td><td>" + (d['service_email_2Field'] ? d['service_email_2Field'] : "") + "</td><td><a  href='https://" + d['service_url_1Field'] + "' target='_blank'>" + (d['service_url_1Field'] ? d['service_url_1Field'] : "") + "</a></td><td><a  href='https://" + d['service_url_2Field'] + "' target='_blank'>" + (d['service_url_2Field'] ? d['service_url_2Field'] : "") + "</a></td></tr>";
+
+                        }
+                        tabst += "</tbody></table>";
+                        $('#divServices').html(tabst);
+
+                        $('#tbServices').DataTable({
+                            "scrollY": 360,
+                            "scrollX": true,
+                            "bInfo": true,
+                            dom: 'Blfrtip',
+                            "lengthMenu": [50, 100],
+                            "pagingType": "full_numbers"
+                        });
+                        $('#myModalspin').hide();
+                    }).error(function (data, status, headers, config) {
+
+                    }).finally(function () {
+                        //sessionStorage.setItem('customerareaID', '');
+                    });
+            };
+            $scope.getcoordinatorsdata = function () {
+                $http.defaults.headers.post["Content-Type"] = "application/xml";
+                $http.defaults.headers.post["Authorization"] = "Bearer " + sessionStorage.getItem('access_token');
+                var url = "/api/GetCoordinators";
+                var xmlrequest = "<SystemDataMessage><Contacts><Contact></Contact></Contacts></SystemDataMessage>";
+                if(sessionStorage.selectedCoordinator)
+                if(sessionStorage.selectedCoordinator.length>0)
+                {
+                    url = "/api/GetCoordinatorsAdmin";
+                    xmlrequest = "<SystemDataMessage><Contacts><Contact><SelectedCoordinator>"+sessionStorage.selectedCoordinator+"</SelectedCoordinator></Contact></Contacts></SystemDataMessage>";
+                }
+                $('#myModalspin').show();
+                $http.post(url, xmlrequest).success(function (data, status, headers, config) {
+                    $scope.getcoordData = data.itemsField;
+                    $scope.getcoordData = $scope.getcoordData[0];
+                    $scope.getcoordData = $scope.getcoordData.contactField;
+
+                    var tabst, phone = "";
+                    tabst = "<table id='tbCoordinators' class='display' cellspacing='0' width='100%'><thead><tr><th align='left'>Area Name</th><th align='left'>Suburb</th><th align='left'>Name</th><th align='left'>Phone</th><th align='left'>Email Address</th><th align='left'>User Name</th><th align='left'>Last Updated</th></tr></thead><tbody>";
+                    for (var i = 0, l = $scope.getcoordData.length; i < l; i++) {
+                        var d = $scope.getcoordData[i];
+                        if (d["recidField"] || d["recidField"])
+                        var name = d["firstnameField"] + " " + d["middlenameField"] + " " + d["lastnameField"];
+                        tabst += "<tr id=" + d["recidField"] + "><td>" + (d["areaNameField"] ? d['areaNameField'] : "") + "<td>" + (d["suburbField"] ? d['suburbField'] : "") + "<td>" + name + "</td><td>" + (d["phone_cellField"] ? d['phone_cellField'] : "") + "</td><td>" + (d['email_address_defaultField'] ? d['email_address_defaultField'] : "") + "</td><td>" + (d['usernameField'] ? d['usernameField'] : "") + "</td><td>" + (d['last_updated_dateField'] ? d['last_updated_dateField'] : "") + "</td></tr>";
+
+                    }
+                    tabst += "</tbody></table>";
+                    $('#divCoordinators').html(tabst);
+
+                    $('#tbCoordinators').DataTable({
+                        "scrollY": 360,
+                        "scrollX": true,
+                        "bInfo": true,
+                        dom: 'Blfrtip',
+                        "lengthMenu": [50, 100],
+                        "pagingType": "full_numbers"
+                    });
+
+                    $('#tbCoordinators1 tbody').on( 'click', 'tr', function () {
+                        $('#tbCoordinators tbody tr').removeClass('selected');
+                        var $el = $(this).toggleClass('selected');
+                        if ($el.hasClass('selected')) {
+                            $('#pselectedContact').html('Added Coordintator : '+$(this).find("td:eq(1)").html()+' to Group: '+sessionStorage.selectedGroup);
+                        }
+                        else
+                        {
+                            $('#pselectedContact').html('Removed Coordintator : '+$(this).find("td:eq(1)").html()+' from Group: '+sessionStorage.selectedGroup);
+                        }
+                        $("#myscModal").fadeIn('slow');
+                        setTimeout( function () { 
+                            $("#myscModal").fadeOut('slow');
+                        }, 700 // milliseconds delay
+                        );
+                    } );
+
+                    $('#myModalspin').hide();
+                }).error(function (data, status, headers, config) {
+
+                }).finally(function () {
+                    //sessionStorage.setItem('customerareaID', '');
+                });
+            };
+            $scope.getmapdata = function () {
+                $('#myModalspin').show();
+                $http.defaults.headers.post["Content-Type"] = "application/xml";
+                $http.defaults.headers.post["Authorization"] = "Bearer " + sessionStorage.getItem('access_token');
+                var url = "/api/GetContacts";
+                var xmlrequest = "<SystemDataMessage><Groups><Group></Group></Groups></SystemDataMessage>";
+                if(sessionStorage.selectedGroup)
+                    if(sessionStorage.selectedGroup.length>0)
+                    {
+                        url = "/api/GetContactsAdmin";
+                        xmlrequest = "<SystemDataMessage><Groups><Group><selectedid>"+sessionStorage.selectedContact+"</selectedid></Group></Groups></SystemDataMessage>";
+                        xmlrequest = "<SystemDataMessage><Contacts><Contact><SelectedGroup>"+sessionStorage.selectedGroup+"</SelectedGroup></Contact></Contacts></SystemDataMessage>";
+                    }
+                $http.post(url, xmlrequest).success(function (data, status, headers, config) {
+                    $scope.getcontactsData = data.itemsField;
+                    $scope.getcontactsData = $scope.getcontactsData[0];
+                    $scope.getcontactsData = $scope.getcontactsData.contactField;
+
+                    var d1 = $scope.getcontactsData[0];
+                    var marker, map;
+                    
+                    var tabst, phone = "";
+                    var infowindow = new google.maps.InfoWindow();
+                    var address = d1['physical_address_numberField'] + " " + d1['physical_address_nameField'] + " " + d1['physical_address_suburbField'];
+                    var addressonmap = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&sensor=true";
+                    $.ajax({
+                        type: 'GET',
+                        url: addressonmap,
+                        data: { get_param: 'value' },
+                        dataType: 'json',
+                        success: function (data) {
+                            var result = (data["results"][0] ? data["results"][0]['geometry']['location'] : "");
+
+                            map = new google.maps.Map(document.getElementById('map'), {
+                                zoom: 17,
+                                center: new google.maps.LatLng(result['lat'], result['lng']),
+                            });
+                            var k = 0;
+                            for (var i = 0, l = $scope.getcontactsData.length-1; i < l; i++) {
+                                var d = $scope.getcontactsData[i];
+                                var ajaxid = 0;
+                                var address = d['physical_address_numberField'] + " " + d['physical_address_nameField'] + " " + d['physical_address_suburbField'];
+                                var addressonmap = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&sensor=true&query="+i;
+                                $.ajax({
+                                    type: 'GET',
+                                    url: addressonmap,
+                                    data: { get_param: 'value', ajaxid: 4},
+                                    dataType: 'json',
+                                    success: function (data) {
+                                        var result = (data["results"][0] ? data["results"][0]['geometry']['location'] : "");
+                                        k++; i = k;
+                                        marker = new google.maps.Marker({
+                                            position: new google.maps.LatLng(result['lat'], result['lng']),
+                                            map: map,
+                                            title: 'Hello NSAKL!'
+                                        });
+                                        google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                                            return function () {
+                                                var addressonmap = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + result['lat'] + "," + result['lng'] + "&sensor=true";
+                                                $.ajax({
+                                                    type: 'GET',
+                                                    url: addressonmap,
+                                                    data: { get_param: 'value' },
+                                                    dataType: 'json',
+                                                    success: function (data) {
+                                                        d = $scope.getcontactsData[i];
+                                                        var result = (data["results"][0] ? data["results"][0]['formatted_address'].split(',').slice(0, -1).join() : "");
+                                                        var name = (d["firstnameField"]?d["firstnameField"]:"") + " " + (d["middlenameField"]?d["middlenameField"]:"") + " " + (d["lastnameField"]?d["lastnameField"]:"");
+                                                        var phone = (d["phone_cellField"] ? d["phone_cellField"] : (d["phone_homeField"] ? d["phone_homeField"] : (d["phone_workField"])));
+                                                        var temp = "<div style='color:black;width:200px;float:left;text-align: left;'><b>Neighbour Name</b> : " + name + "<br/><b>Address:</b>" + result + "<br/><b>Phone:</b>" + phone + "</div><div style='float:right'><img src=></div>";
+
+                                                        infowindow.setContent(temp);
+                                                        infowindow.open(map, marker);
+                                                    }
+                                                });
+                                            }
+                                        })(marker, i));
+                                    }
+                                });
+                            }
+                        }
+                    });
+                    $('#myModalspin').hide();
+                }).error(function (data, status, headers, config) {
+
+                }).finally(function () {
+                    $('#myModalspin').hide();
+                });
+            };
+
+            $scope.getuserprofile = function () {
+                $http.defaults.headers.post["Content-Type"] = "application/xml";
+                $http.defaults.headers.post["Authorization"] = "Bearer " + sessionStorage.getItem('access_token');
+                $http.post('/api/GetUserProfile', '<SystemDataMessage><Contacts><Contact></Contact></Contacts></SystemDataMessage>').success(function (data, status, headers, config) {
+                    $scope.getuserprofileData = data.itemsField;
+                    $scope.getuserprofileData = $scope.getuserprofileData[0];
+                    $scope.getuserprofileData = $scope.getuserprofileData.contactField;
+
+                    for (var i = 0, l = $scope.getuserprofileData.length; i < l; i++) {
+
+                        var d = $scope.getuserprofileData[i];
+                        if (d["recidField"])
+                        {
+                        
+                            $('#txt_firstname').val(d["firstnameField"]);
+                            $('#txt_middlename').val(d["middlenameField"]?d["middlenameField"]:"");
+                            $('#txt_lastname ').val(d["lastnameField"]);
+                            $('#RadioButtonList1_0').val(d["recidField"]);
+
+                            //$('#txt_home_phone_area_code').val(d["phone_homeField"]);
+                            $('#txt_home_phone').val(d["phone_homeField"]?d["phone_homeField"]:"");
+                            //$('#txt_work_phone_area_code').val(d["recidField"]);
+                            $('#txt_work_phone').val(d["phone_workField"]?d["phone_workField"]:"");
+                            //$('#ddl_cell_phone_prefix').val(d["recidField"]);
+                            $('#txt_cell_phone').val(d["phone_cellField"]);
+                            $('#txt_email').val(d["email_address_defaultField"]);
+
+                            $('#txt_unit_number ').val(d["physical_address_unit_numberField"]);
+                            $('#txt_address_number').val(d["physical_address_numberField"]);
+                            $('#txt_address_name').val(d["physical_address_nameField"]);
+                            //$('#btn_refresh').val(d["recidField"]);
+                            $('#txt_physical_suburb ').val(d["postal_address_suburbField"]);
+                            $('#txt_physical_postcode').val(d["physical_address_postcodeField"]);
+                            $('#txt_box_number').val(d["postal_address_box_lobby_locationField"]);
+                            //$('#ddl_box_lobby').val(d["recidField"]);
+                        }
+                    }
+
+                    $('#myModalspin').hide();
+                }).error(function (data, status, headers, config) {
+
+                }).finally(function () {
+                });
+            };
+            $scope.userforgotpassword = function () {
+                $http.defaults.headers.post["Content-Type"] = "application/xml";
+                $http.defaults.headers.post["Authorization"] = "Bearer " + sessionStorage.getItem('access_token');
+                $http.post('/api/ForgotUserPassword', '<SystemDataMessage><Contacts><Contact></Contact></Contacts></SystemDataMessage>').success(function (data, status, headers, config) {
+                    $scope.getuserprofileData = data.itemsField;
+                    $scope.getuserprofileData = $scope.getuserprofileData[0];
+                    $scope.getuserprofileData = $scope.getuserprofileData.contactField;
+
+                    for (var i = 0, l = $scope.getuserprofileData.length; i < l; i++) {
+                        var d = $scope.getuserprofileData[i];
+                        if (d["recidField"] || d["recidField"])
+                            var a =1;
+                    }
+
+                    $('#myModalspin').hide();
+                }).error(function (data, status, headers, config) {
+
+                }).finally(function () {
+                });
+            };
+            $scope.userchangepassword = function () {
+                if ($('#cpPassword').val()) {
+                    $http.defaults.headers.post["Content-Type"] = "application/xml";
+                    $http.defaults.headers.post["Authorization"] = "Bearer " + sessionStorage.getItem('access_token');
+                    $http.post('/api/ChangeUserPassword', '<SystemDataMessage><Contacts><Contact><Username></Username><Password>' + $('#cpPassword').val() + '</Password></Contact></Contacts></SystemDataMessage>').success(function (data, status, headers, config) {
+                        alert('Password changed successfully!')
+                        $('#myaccountModalCPassword').hide();
+                        $('#myModalspin').hide();
+                    }).error(function (data, status, headers, config) {
+
+                    }).finally(function () {
+                    });
+                }
+            };
+
+        }]);
+        $(document).ready(function () {
+            
+            sessionStorage.setItem('GetContactsData', '');
+            sessionStorage.setItem('selectedGroup', '');
+            sessionStorage.setItem('selectedCoordinator', '');
+            $('#lblNeighbourSupport').text(sessionStorage.userName);
+            $("#defaultOpenContacts").click();
+            $('#btnLogout').on('click', function (event) {
+                sessionStorage.clear();
+                sessionStorage.setItem('GetContactsData', '');
+                window.history.back();
+                event.preventDefault(); // To prevent following the link (optional)
+            });
+            $('#myModalspin').show();
+            //angular.element($("#Map")).scope().getcontactsdata();
+
+            $('#ancProfile').on('click', function (event) {
+                $('#myaccountModal').show();
+                angular.element($("#Map")).scope().getuserprofile();
+                $('#myaccountModal .close').click(function () {
+                    $('#myaccountModal').hide();
+                });
+                $('#myaccountcancelBtn').click(function () {
+                    $('#myaccountModal').hide();
+                });
+                $('#myaccountupdateBtn').click(function () {
+                    $('#myaccountModal').hide();
+                });
+                
+            });
+            $('#ancChangePassword').on('click', function (event) {
+                $('#myaccountModalCPassword').show();
+                $('#myaccountModalCPassword .close').click(function () {
+                    $('#myaccountModalCPassword').hide();
+                });
+                $('.myaccountcancelBtn').click(function () {
+                    $('#myaccountModalCPassword').hide();
+                });
+                $('#myaccountcpsubmitBtn').unbind().click(function () {
+                    if( $('#cpPassword').val() != $('#ccpPassword').val())
+                        $('#lblpwdValidation').show();
+                    else {
+                        $('#lblpwdValidation').hide();
+                        angular.element($("#Map")).scope().userchangepassword();
+                    }
+                });
+            });
+            
+            $('#myaccountsubmitBtn').click(function () {
+                //call angular edit profile functon
+                angular.element($("#myaccountModal")).scope().updateProfiletoggle();
+            });
+        });
+
+
+    </script>
+<!--</head>-->
+<body>
+    <header id="header">
+        <div class="container">
+            <h1>
+                <label id="lblNeighbourSupport"></label> - Neighbourhood Support Auckland Region
+            </h1>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="/Home/Index">Home</a>
+                    </li>
+                    <!--<li>
+                        <a href="#">About</a>
+                    </li>-->
+                    <!--<li>
+                        <a href="#">Services</a>
+                    </li>-->
+                    <li>
+                        <a href="#" id="ancProfile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#" id="ancChangePassword">Change Password</a>
+                    </li>
+                    <!--<li>
+                        <a href="#">Contact</a>
+                    </li>-->
+                    <li>
+                        <a href="#" id="btnLogout">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">.
+            <!-- Modal -->
+            <div id="myscModal" class="modal" style="display:none;">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <!--<div class="modal-header" style="padding: 5px 16px;">
+                        <span class="close">Close &#10006;</span>
+                        <h2 style="display: inline;">Contact<label id="lblmodalLabel"></label></h2>
+                    </div>-->
+                    <div id="">
+                        <div style="width: 80%;font-size: 18pt;" align="center">
+                            <div id="pselectedContact" style=""></div>
+                        </div>
+                    </div>
+                    <!--<div class="modal-footer">
+                        <h3></h3>
+                    </div>-->
+                </div>
+            </div>
+            <div id="myModalspin" class="modal" style="background: #a7a7a7;display:block;z-index:10;">
+                <div class="sk-circle" ng-show="loading">
+                    <div class="sk-circle1 sk-child"></div>
+                    <div class="sk-circle2 sk-child"></div>
+                    <div class="sk-circle3 sk-child"></div>
+                    <div class="sk-circle4 sk-child"></div>
+                    <div class="sk-circle5 sk-child"></div>
+                    <div class="sk-circle6 sk-child"></div>
+                    <div class="sk-circle7 sk-child"></div>
+                    <div class="sk-circle8 sk-child"></div>
+                    <div class="sk-circle9 sk-child"></div>
+                    <div class="sk-circle10 sk-child"></div>
+                    <div class="sk-circle11 sk-child"></div>
+                    <div class="sk-circle12 sk-child"></div>
+                    <div style="position: absolute;bottom:50%;font-size:15pt;">Loading</div>
+                </div>
+            </div>
+            <div id="myaccountModalCPassword" class="modal" style="display:none;background: #a7a7a7;">
+                <!-- Modal content -->
+                <div class="modal-content" style="width: 40%;">
+                    <div class="modal-header" style="padding: 5px 16px;">
+                        <span class="close">Close &#10006;</span>
+                        <h2 style="display: inline;">Change Password<label id="lblmodalLabel"></label></h2>
+                    </div>
+                    <div id="myaccountModalCPasswordP">
+                        <div class="editprofilecontainer" style="">
+                            <div class="">
+                                <table width="width: 100%;" style="margin:auto;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Password:
+                                            </td>
+                                            <td>
+                                                <input name="cpPassword" type="text" maxlength="12" id="cpPassword" title="Enter a password (min 7 characters and must include at least one of these: !@#$%?^&amp;)+=" style="width:70%;">
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Confirm Password:
+                                            </td>
+                                            <td>
+                                                <input name="ccpPassword" type="text" maxlength="12" id="ccpPassword" title="Re-enter your password to confirm" style="width:70%;">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <label style="color:red;display:none;" id="lblpwdValidation">Password Mismatch , Please try again..</label>
+                                            </td>
+                                        </tr>
+                                        <tr><td><button class="myaccountcancelBtn">Cancel</button><td><button style="margin-left:25px;" id="myaccountcpsubmitBtn">Update</button></tr>
+                                    </tbody>
+                                </table>
+                                <table style="width: 80%;"></table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+            <div id="myaccountModal" class="modal" style="display:none;background: #a7a7a7;">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding: 5px 16px;">
+                        <span class="close">Close &#10006;</span>
+                        <h2 style="display: inline;">Profile<label id="lblmodalLabel"></label></h2>
+                    </div>
+                    <div id="myaccountModalProfile">
+                        <div class="editprofilecontainer" style="">
+                            
+                            <div class="">
+
+                                <table width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td style="vertical-align:top;padding:8px;border:1px solid #C8C8C8;background-color:#f8f8f8;">
+                                                <table width="80%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="text-align:left;">
+                                                                <span style="font-size:12pt;font-weight:bold;">
+                                                                    <span id="lbl_title1">Name</span>
+                                                                </span>
+                                                            </td>
+                                                            <td style="text-align:right;">
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="text-align:left;vertical-align:middle;">
+                                                                First:
+                                                                <input name="ctl00$DefaultPage$txt_firstname" type="text" maxlength="30" id="txt_firstname" style="width:108px;">
+
+                                                                <span id="rfv1" style="color:Red;visibility:hidden;">*</span>
+                                                            </td>
+                                                            <td style="text-align:left;vertical-align:middle;">
+                                                                Middle:
+                                                                <input name="ctl00$DefaultPage$txt_middlename" type="text" maxlength="30" id="txt_middlename" title="Middle name, if any" style="width:90px;">
+
+                                                            </td>
+                                                            <td style="text-align:left;vertical-align:middle;">
+                                                                Last:
+                                                                <input name="ctl00$DefaultPage$txt_lastname" type="text" maxlength="30" id="txt_lastname" style="width:108px;">
+
+                                                                <span id="rfv2" style="color:Red;visibility:hidden;">*</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="text-align:left;vertical-align:top;" colspan="3">
+                                                                Gender:
+                                                                <span id="RadioButtonList1"><input id="RadioButtonList1_0" type="radio" name="ctl00$DefaultPage$RadioButtonList1" value="F" checked="checked"><label for="RadioButtonList1_0">F</label><input id="RadioButtonList1_1" type="radio" name="ctl00$DefaultPage$RadioButtonList1" value="M"><label for="RadioButtonList1_1">M</label></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <br>
+                                                <span style="font-size:12pt;font-weight:bold;">
+                                                    <span id="Label1">Contact Details</span>
+                                                </span>
+                                                <table>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                Home ph
+                                                                <input name="ctl00$DefaultPage$txt_home_phone_area_code" type="text" value="09" id="txt_home_phone_area_code" disabled="disabled" style="width:20px;text-align:center;">
+                                                                <input name="ctl00$DefaultPage$txt_home_phone" type="text" maxlength="7" id="txt_home_phone" title="Enter only numbers without spaces" style="width:60px;">
+
+                                                            </td>
+                                                            <td>
+                                                                Work ph
+                                                                <input name="ctl00$DefaultPage$txt_work_phone_area_code" type="text" value="09" id="txt_work_phone_area_code" disabled="disabled" style="width:20px;text-align:center;">
+                                                                <input name="ctl00$DefaultPage$txt_work_phone" type="text" maxlength="7" id="txt_work_phone" title="Enter only numbers without spaces" style="width:60px;">
+
+                                                            </td>
+                                                            <td>
+                                                                Cell ph
+                                                                <select name="ctl00$DefaultPage$ddl_cell_phone_prefix" id="ddl_cell_phone_prefix" class="noprint" style="width:50px;">
+                                                                    <option selected="selected" value="021">021</option>
+                                                                    <option value="022">022</option>
+                                                                    <option value="025">025</option>
+                                                                    <option value="026">026</option>
+                                                                    <option value="027">027</option>
+                                                                    <option value="028">028</option>
+                                                                    <option value="029">029</option>
+
+                                                                </select>
+                                                                <input name="ctl00$DefaultPage$txt_cell_phone" type="text" maxlength="8" id="txt_cell_phone" title="Enter only numbers without spaces" style="width:60px;">
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="3">
+                                                                Email
+                                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                                <input name="ctl00$DefaultPage$txt_email" type="text" maxlength="50" id="txt_email" title="You need to have an email address to join online." style="width:300px;">
+                                                                <span id="rfv3" style="color:Red;visibility:hidden;">*</span>
+                                                                <span id="regexvalemail" style="color:Red;visibility:hidden;">*</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <br>
+                                                <p>
+                                                    <span style="font-size:12pt;font-weight:bold;">
+                                                        <span id="lbl_title2">Physical Address</span>
+                                                    </span>
+                                                    <br>
+
+                                                    Unit/Flat/Apt No.:&nbsp;
+                                                    <input name="ctl00$DefaultPage$txt_unit_number" type="text" value="3" maxlength="2" id="txt_unit_number" style="width:38px;">
+                                                    <br>
+                                                    No.
+                                                    <input name="ctl00$DefaultPage$txt_address_number" type="text" value="555" maxlength="4" id="txt_address_number" title="Enter street number incl. street alpha (e.g. 182 or 213A)" style="width:32px;">
+                                                    <span id="rfv_address_number" style="color:Red;visibility:hidden;">*</span>
+                                                    Street:
+                                                    <input name="ctl00$DefaultPage$txt_address_name" type="text" value="Sandringham Road, Sandringham" maxlength="3" onchange="javascript:setTimeout('__doPostBack(\'ctl00$DefaultPage$txt_address_name\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txt_address_name" title="Type the first 3 letters of street name" style="width:200px;" autocomplete="off">
+                                                    <input type="submit" name="ctl00$DefaultPage$btn_refresh" value="Refresh" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$DefaultPage$btn_refresh&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="btn_refresh" style="font-size:8pt;">
+
+
+
+                                                    <br>
+                                                    <span id="lbl_physical_suburb" style="background-color:#f8f8f8;">Suburb:</span>
+                                                    <input name="ctl00$DefaultPage$txt_physical_suburb" type="text" value="Sandringham" readonly="readonly" id="txt_physical_suburb" style="width:108px;border:0 none;background-color:#f8f8f8;font-weight:bold;">
+                                                    <span id="lbl_physical_postcode" style="background-color:#f8f8f8;">Postcode:</span>
+                                                    <input name="ctl00$DefaultPage$txt_physical_postcode" type="text" value="1025" maxlength="4" readonly="readonly" id="txt_physical_postcode" style="width:50px;border:0 none;background-color:#f8f8f8;font-weight:bold;">
+
+                                                </p>
+
+
+                                                <br>
+                                                <p>
+                                                    <span style="font-size:12pt;font-weight:bold;">
+                                                        <span id="lbl_title3">Postal Address</span>
+                                                    </span> (if applicable)
+                                                    <br>
+                                                    PO Box/Private Bag No.:
+                                                    <input name="ctl00$DefaultPage$txt_box_number" type="text" maxlength="5" id="txt_box_number" style="width:38px;">
+
+                                                    PO Location:
+                                                    <select name="ctl00$DefaultPage$ddl_box_lobby" onchange="javascript:setTimeout('__doPostBack(\'ctl00$DefaultPage$ddl_box_lobby\',\'\')', 0)" id="ddl_box_lobby" class="noprint" style="width:138px;">
+                                                        <option value=""></option>
+                                                        <option value="Auckland City ">Auckland City </option>
+                                                        <option value="Auckland Hospital ">Auckland Hospital </option>
+                                                        <option value="Avondale ">Avondale </option>
+                                                        <option value="Balmoral ">Balmoral </option>
+                                                        <option value="Blockhouse Bay ">Blockhouse Bay </option>
+                                                        <option value="Dominion Road ">Dominion Road </option>
+                                                        <option value="Eastridge ">Eastridge </option>
+                                                        <option value="Ellerslie ">Ellerslie </option>
+                                                        <option value="Epsom ">Epsom </option>
+                                                        <option value="Glen Innes ">Glen Innes </option>
+                                                        <option value="Greenlane ">Greenlane </option>
+                                                        <option value="Greenwoods Corner ">Greenwoods Corner </option>
+                                                        <option value="Grey Lynn ">Grey Lynn </option>
+                                                        <option value="Harris Road ">Harris Road </option>
+                                                        <option value="Herne Bay ">Herne Bay </option>
+                                                        <option value="Kalmia Street ">Kalmia Street </option>
+                                                        <option selected="selected" value="Kingsland ">Kingsland </option>
+                                                        <option value="Lynfield ">Lynfield </option>
+                                                        <option value="Market Road ">Market Road </option>
+                                                        <option value="Meadowbank ">Meadowbank </option>
+                                                        <option value="Mission Bay ">Mission Bay </option>
+                                                        <option value="Mount Albert ">Mount Albert </option>
+                                                        <option value="Mount Eden ">Mount Eden </option>
+                                                        <option value="Mount Roskill ">Mount Roskill </option>
+                                                        <option value="Mount Roskill South ">Mount Roskill South </option>
+                                                        <option value="Mount Wellington ">Mount Wellington </option>
+                                                        <option value="Newmarket ">Newmarket </option>
+                                                        <option value="Newton ">Newton </option>
+                                                        <option value="Onehunga ">Onehunga </option>
+                                                        <option value="Orakei ">Orakei </option>
+                                                        <option value="Otahuhu ">Otahuhu </option>
+                                                        <option value="Owairaka ">Owairaka </option>
+                                                        <option value="Panmure ">Panmure </option>
+                                                        <option value="Parnell ">Parnell </option>
+                                                        <option value="Penrose ">Penrose </option>
+                                                        <option value="Point Chevalier ">Point Chevalier </option>
+                                                        <option value="Ponsonby ">Ponsonby </option>
+                                                        <option value="Remuera ">Remuera </option>
+                                                        <option value="Rosebank ">Rosebank </option>
+                                                        <option value="Royal Oak ">Royal Oak </option>
+                                                        <option value="Sandringham ">Sandringham </option>
+                                                        <option value="Shortland Street ">Shortland Street </option>
+                                                        <option value="St Heliers ">St Heliers </option>
+                                                        <option value="St Lukes ">St Lukes </option>
+                                                        <option value="Sylvia Park ">Sylvia Park </option>
+                                                        <option value="Symonds Street ">Symonds Street </option>
+                                                        <option value="Victoria Street West ">Victoria Street West </option>
+                                                        <option value="Wellesley Street ">Wellesley Street </option>
+
+                                                    </select>
+                                                    <br>
+                                                    City:
+                                                    <input name="ctl00$DefaultPage$txt_postal_suburb" type="text" value="Auckland" readonly="readonly" id="txt_postal_suburb" style="width:68px;border:0 none;background-color:#f8f8f8;font-weight:bold;">
+                                                    <span id="lbl_postal_postcode">Postcode:</span>
+                                                    <input name="ctl00$DefaultPage$txt_postal_postcode" type="text" value="1352" maxlength="4" readonly="readonly" id="txt_postal_postcode" style="width:50px;border:0 none;background-color:#f8f8f8;font-weight:bold;">
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    <button id="myaccountupdateBtn" style="padding: 10px;margin-left: 5%;">Update</button>
+                                                    <button id="myaccountcancelBtn" style="padding: 10px;margin-left: 5%;">Cancel</button>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!--<table style="margin: 0 auto;padding: 2%;">
+                                    <tr><td>First Name <td><input id="editprofilefname" type="text"  ></td></tr>
+                                    <tr><td>Middle Name <td><input id="editprofilemname" type="text"  ></td></tr>
+                                    <tr><td>Last Name <td><input id="editprofilelname" type="text"></td></tr>
+                                    <tr><td>Phone (Work)<td><input id="editprofilewphone" type="text"></td></tr>
+                                    <tr><td>Phone (Home)<td><input id="editprofilehphone" type="text"></td></tr>
+                                    <tr><td>Phone (Cell)<td><input id="editprofilecellphone" type="text"></td></tr>
+
+                                    <tr><td>Physical Address<td>
+                                    <tr>
+                                        <td>
+                                            Unit/Flat/Apt No.:
+                                        <td>
+                                            <input id="editprofilephyaddressaptno" type="text">
+                                            <br />
+                                    <tr>
+                                        <td>
+                                            No.
+                                        <td>
+                                            <input id="editprofilephyaddressno" type="text">
+                                            <br />
+                                    <tr>
+                                        <td>
+                                            Street:
+                                        <td>
+                                            <input id="editprofilephyaddressst" type="text">
+                                            <br />
+                                    <tr>
+                                        <td>
+                                            Suburb:
+                                        <td>
+                                            <label id="lbleditprofilephyaddresssuburb" />
+                                            <br />
+                                    <tr>
+                                        <td>
+                                            Postcode:
+                                        <td>
+                                            <label id="editprofilephyaddresspostcode" />
+                                        </td>
+                                    </tr>
+
+                                    <tr><td>Postal Address<td>PO Box/Private
+                                    <tr>
+                                        <td>
+                                            Bag No.:
+                                        <td>
+                                            <input id="editprofilePostaladdressPoBox" type="text"><br />
+                                    <tr>
+                                        <td>
+                                            PO Location:
+                                        <td>
+                                            <select name="ctl00$DefaultPage$ddl_box_lobby" onchange="javascript:setTimeout('__doPostBack(\'ctl00$DefaultPage$ddl_box_lobby\',\'\')', 0)" class="noprint" style="width:138px;">
+                                                <option selected="selected" value=""></option>
+                                                <option value="Auckland City ">Auckland City </option>
+                                                <option value="Auckland Hospital ">Auckland Hospital </option>
+                                                <option value="Avondale ">Avondale </option>
+                                                <option value="Balmoral ">Balmoral </option>
+                                                <option value="Blockhouse Bay ">Blockhouse Bay </option>
+                                                <option value="Dominion Road ">Dominion Road </option>
+                                                <option value="Eastridge ">Eastridge </option>
+                                                <option value="Ellerslie ">Ellerslie </option>
+                                                <option value="Epsom ">Epsom </option>
+                                                <option value="Glen Innes ">Glen Innes </option>
+                                                <option value="Greenlane ">Greenlane </option>
+                                                <option value="Greenwoods Corner ">Greenwoods Corner </option>
+                                                <option value="Grey Lynn ">Grey Lynn </option>
+                                                <option value="Harris Road ">Harris Road </option>
+                                                <option value="Herne Bay ">Herne Bay </option>
+                                                <option value="Kalmia Street ">Kalmia Street </option>
+                                                <option value="Kingsland ">Kingsland </option>
+                                                <option value="Lynfield ">Lynfield </option>
+                                                <option value="Market Road ">Market Road </option>
+                                                <option value="Meadowbank ">Meadowbank </option>
+                                                <option value="Mission Bay ">Mission Bay </option>
+                                                <option value="Mount Albert ">Mount Albert </option>
+                                                <option value="Mount Eden ">Mount Eden </option>
+                                                <option value="Mount Roskill ">Mount Roskill </option>
+                                                <option value="Mount Roskill South ">Mount Roskill South </option>
+                                                <option value="Mount Wellington ">Mount Wellington </option>
+                                                <option value="Newmarket ">Newmarket </option>
+                                                <option value="Newton ">Newton </option>
+                                                <option value="Onehunga ">Onehunga </option>
+                                                <option value="Orakei ">Orakei </option>
+                                                <option value="Otahuhu ">Otahuhu </option>
+                                                <option value="Owairaka ">Owairaka </option>
+                                                <option value="Panmure ">Panmure </option>
+                                                <option value="Parnell ">Parnell </option>
+                                                <option value="Penrose ">Penrose </option>
+                                                <option value="Point Chevalier ">Point Chevalier </option>
+                                                <option value="Ponsonby ">Ponsonby </option>
+                                                <option value="Remuera ">Remuera </option>
+                                                <option value="Rosebank ">Rosebank </option>
+                                                <option value="Royal Oak ">Royal Oak </option>
+                                                <option value="Sandringham ">Sandringham </option>
+                                                <option value="Shortland Street ">Shortland Street </option>
+                                                <option value="St Heliers ">St Heliers </option>
+                                                <option value="St Lukes ">St Lukes </option>
+                                                <option value="Sylvia Park ">Sylvia Park </option>
+                                                <option value="Symonds Street ">Symonds Street </option>
+                                                <option value="Victoria Street West ">Victoria Street West </option>
+                                                <option value="Wellesley Street ">Wellesley Street </option>
+
+                                            </select> <br />
+                                    <tr>
+                                        <td>
+                                            City:
+                                        <td>
+                                            <label id="lbleditprofilePostaladdressCity" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Postcode:
+                                        <td>
+                                            <label id="lbleditprofilePostaladdresspostcode" />
+                                        </td>
+                                    </tr>
+                                   
+                                    <tr><td><button id="myaccountcancelBtn">Cancel</button><td><button style="margin-left:25px;" id="myaccountsubmitBtn">Update </button></tr>
+                                </table>-->
+                                <table style="width: 80%;">
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+            <div id="articleAlarmNz">
+                <!--<ng-view>-->
+                    <div ng-app="itemsviewApp1" ng-controller="itemsviewCtrl1" id="divItemsview1">
+                        <div id="divSelectedContact" style="font-size: 18pt;color: blue;text-align: center;"></div>
+                        <!--<button style="float:left;">Profile</button>
+                        <button style="float:right;">Logout</button><br /><br />-->
+                        {{NSAKLSelectedContact}}
+                        <div ng-show="NSAKLSelectedContact == 'Jacinda  Manconi'" style="font-size: 18pt;color: blue;text-align: center;">Selected Contact: {{NSAKLSelectedContact}}</div>
+                        <div class="tab">
+                            <button class="tablinks" onclick="openTab('Contacts')" id="defaultOpenContacts">Contacts</button>
+                            <button class="tablinks" onclick="openTab('Groups')">Groups</button>
+                            <button class="tablinks" onclick="openTab('Coordinators')">Coordinators</button>
+                            <button class="tablinks" onclick="openTab('Services')">Agencies</button>
+                            <button class="tablinks" onclick="openTab('Map')">Map</button>
+                            <button class="tablinks" onclick="openTab('Documents')">Documents</button>
+                        </div>
+
+                        <div id="Contacts" class="tabcontent">
+                            <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                            <!--<h3>Contacts</h3>-->
+                            <div id="divContacts"></div>
+                        </div>
+
+                        <div id="Groups" class="tabcontent">
+                            <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                            <!--<h3>Groups</h3>--><div id="divGroups"></div>
+                        </div>
+                        <div id="Coordinators" class="tabcontent">
+                            <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                            <!--<h3>Groups</h3>--><div id="divCoordinators"></div>
+                        </div>
+                        <div id="Services" class="tabcontent">
+                            <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                            <!--<h3>Services</h3>--><div id="divServices"></div>
+                        </div>
+                        <div id="Map" class="tabcontent">
+                            <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                            <!--<h3>Map</h3>--><div id="map" style="height: 700px;"></div><div id="divMap"></div>
+                        </div>
+                        <div id="Documents" class="tabcontent">
+                            <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                            <!--<h3>Map</h3>--><div id="divDocuments" style="height: 700px;"></div><div id="divDocuments"></div>
+                        </div>
+                    </div>
+                <!--</ng-view>-->
+            </div>
+        </div>
+    </div>
+    <!--<div class="footer">
+        <p>Copyright © Alarm New Zealand</p>
+    </div>-->
+</body>
+</html> 

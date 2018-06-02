@@ -1,0 +1,772 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NSAKLEntities_dbModelStoreContainer" CdmEntityContainer="NSAKLEntities">
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="roles" ColumnName="roles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="actions_list">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.actions_list">
+        <MappingFragment StoreEntitySet="actions_list">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="action_by" ColumnName="action_by" />
+          <ScalarProperty Name="action_item" ColumnName="action_item" />
+          <ScalarProperty Name="action_remarks" ColumnName="action_remarks" />
+          <ScalarProperty Name="date_assigned" ColumnName="date_assigned" />
+          <ScalarProperty Name="date_due" ColumnName="date_due" />
+          <ScalarProperty Name="date_completed" ColumnName="date_completed" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="last_updated_by" ColumnName="last_updated_by" />
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="appsetups">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.appsetup">
+        <MappingFragment StoreEntitySet="appsetup">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="email_smtp_host" ColumnName="email_smtp_host" />
+          <ScalarProperty Name="moderator_firstname" ColumnName="moderator_firstname" />
+          <ScalarProperty Name="moderator_lastname" ColumnName="moderator_lastname" />
+          <ScalarProperty Name="default_email_originator" ColumnName="default_email_originator" />
+          <ScalarProperty Name="default_email_recipient" ColumnName="default_email_recipient" />
+          <ScalarProperty Name="developer_firstname" ColumnName="developer_firstname" />
+          <ScalarProperty Name="developer_lastname" ColumnName="developer_lastname" />
+          <ScalarProperty Name="email_acknowledgement_text" ColumnName="email_acknowledgement_text" />
+          <ScalarProperty Name="email_welcome_text" ColumnName="email_welcome_text" />
+          <ScalarProperty Name="marquee_text" ColumnName="marquee_text" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="articles">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.article">
+        <MappingFragment StoreEntitySet="articles">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="author_id" ColumnName="author_id" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="article1" ColumnName="article" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="articles_authors">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.articles_authors">
+        <MappingFragment StoreEntitySet="articles_authors">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="author_firstname" ColumnName="author_firstname" />
+          <ScalarProperty Name="author_lastname" ColumnName="author_lastname" />
+          <ScalarProperty Name="organisation" ColumnName="organisation" />
+          <ScalarProperty Name="email_address" ColumnName="email_address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Applications">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.aspnet_Applications">
+        <MappingFragment StoreEntitySet="aspnet_Applications">
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Membership">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.aspnet_Membership">
+        <MappingFragment StoreEntitySet="aspnet_Membership">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Paths">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.aspnet_Paths">
+        <MappingFragment StoreEntitySet="aspnet_Paths">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationAllUsers">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.aspnet_PersonalizationAllUsers">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationPerUser">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.aspnet_PersonalizationPerUser">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Profile">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.aspnet_Profile">
+        <MappingFragment StoreEntitySet="aspnet_Profile">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Roles">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.aspnet_Roles">
+        <MappingFragment StoreEntitySet="aspnet_Roles">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_SchemaVersions">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.aspnet_SchemaVersions">
+        <MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+          <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+          <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Users">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.aspnet_Users">
+        <MappingFragment StoreEntitySet="aspnet_Users">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_UsersInRoles">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.aspnet_UsersInRoles">
+        <MappingFragment StoreEntitySet="aspnet_UsersInRoles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_WebEvent_Events">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.aspnet_WebEvent_Events">
+        <MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+          <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+          <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+          <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="auckland_local_boards">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.auckland_local_boards">
+        <MappingFragment StoreEntitySet="auckland_local_boards">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="local_board" ColumnName="local_board" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="committees">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.committee">
+        <MappingFragment StoreEntitySet="committee">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="committee_role" ColumnName="committee_role" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coordinators">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.coordinator">
+        <MappingFragment StoreEntitySet="coordinators">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="member_id" ColumnName="member_id" />
+          <ScalarProperty Name="area_name" ColumnName="area_name" />
+          <ScalarProperty Name="suburb" ColumnName="suburb" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="last_updated_by" ColumnName="last_updated_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deleted_group_members">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.deleted_group_members">
+        <MappingFragment StoreEntitySet="deleted_group_members">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="member_id" ColumnName="member_id" />
+          <ScalarProperty Name="street_contact_status" ColumnName="street_contact_status" />
+          <ScalarProperty Name="membership_status" ColumnName="membership_status" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="last_updated_by" ColumnName="last_updated_by" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="deleted_members">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.deleted_members">
+        <MappingFragment StoreEntitySet="deleted_members">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="physical_address_unit_number" ColumnName="physical_address_unit_number" />
+          <ScalarProperty Name="physical_address_number" ColumnName="physical_address_number" />
+          <ScalarProperty Name="physical_address_name" ColumnName="physical_address_name" />
+          <ScalarProperty Name="physical_address_suburb" ColumnName="physical_address_suburb" />
+          <ScalarProperty Name="physical_address_postcode" ColumnName="physical_address_postcode" />
+          <ScalarProperty Name="postal_address_number" ColumnName="postal_address_number" />
+          <ScalarProperty Name="postal_address_box_lobby_location" ColumnName="postal_address_box_lobby_location" />
+          <ScalarProperty Name="postal_address_suburb" ColumnName="postal_address_suburb" />
+          <ScalarProperty Name="postal_address_postcode" ColumnName="postal_address_postcode" />
+          <ScalarProperty Name="phone_home" ColumnName="phone_home" />
+          <ScalarProperty Name="phone_work" ColumnName="phone_work" />
+          <ScalarProperty Name="phone_cell" ColumnName="phone_cell" />
+          <ScalarProperty Name="email_address_default" ColumnName="email_address_default" />
+          <ScalarProperty Name="email_address_alternate" ColumnName="email_address_alternate" />
+          <ScalarProperty Name="signup_date" ColumnName="signup_date" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="ip_address" ColumnName="ip_address" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="emergency_volunteering_status" ColumnName="emergency_volunteering_status" />
+          <ScalarProperty Name="mailing_list_status" ColumnName="mailing_list_status" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+          <ScalarProperty Name="occupation" ColumnName="occupation" />
+          <ScalarProperty Name="other_remarks" ColumnName="other_remarks" />
+          <ScalarProperty Name="last_updated_date" ColumnName="last_updated_date" />
+          <ScalarProperty Name="last_updated_by" ColumnName="last_updated_by" />
+          <ScalarProperty Name="deleted_date" ColumnName="deleted_date" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="doc_types">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.doc_types">
+        <MappingFragment StoreEntitySet="doc_types">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="doc_type" ColumnName="doc_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="documents">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.document">
+        <MappingFragment StoreEntitySet="documents">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="doc_title" ColumnName="doc_title" />
+          <ScalarProperty Name="doc_type_id" ColumnName="doc_type_id" />
+          <ScalarProperty Name="doc_author" ColumnName="doc_author" />
+          <ScalarProperty Name="doc_publisher" ColumnName="doc_publisher" />
+          <ScalarProperty Name="doc_date" ColumnName="doc_date" />
+          <ScalarProperty Name="doc_number" ColumnName="doc_number" />
+          <ScalarProperty Name="doc_remarks" ColumnName="doc_remarks" />
+          <ScalarProperty Name="doc_path" ColumnName="doc_path" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="uploaded_by" ColumnName="uploaded_by" />
+          <ScalarProperty Name="deleted_by" ColumnName="deleted_by" />
+          <ScalarProperty Name="date_deleted" ColumnName="date_deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="enquiries_log">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.enquiries_log">
+        <MappingFragment StoreEntitySet="enquiries_log">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="datetimelog" ColumnName="datetimelog" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="enquiry_source" ColumnName="enquiry_source" />
+          <ScalarProperty Name="follow_up_by" ColumnName="follow_up_by" />
+          <ScalarProperty Name="follow_up_date" ColumnName="follow_up_date" />
+          <ScalarProperty Name="follow_up_remarks" ColumnName="follow_up_remarks" />
+          <ScalarProperty Name="meeting_by" ColumnName="meeting_by" />
+          <ScalarProperty Name="meeting_date" ColumnName="meeting_date" />
+          <ScalarProperty Name="action_remarks" ColumnName="action_remarks" />
+          <ScalarProperty Name="last_updated_by" ColumnName="last_updated_by" />
+          <ScalarProperty Name="last_updated_date" ColumnName="last_updated_date" />
+          <ScalarProperty Name="completed_date" ColumnName="completed_date" />
+          <ScalarProperty Name="completed_by" ColumnName="completed_by" />
+          <ScalarProperty Name="initial_response" ColumnName="initial_response" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="good_neighbour_despatch_log">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.good_neighbour_despatch_log">
+        <MappingFragment StoreEntitySet="good_neighbour_despatch_log">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="subscriber_id" ColumnName="subscriber_id" />
+          <ScalarProperty Name="issue_number" ColumnName="issue_number" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="good_neighbour_subscribers">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.good_neighbour_subscribers">
+        <MappingFragment StoreEntitySet="good_neighbour_subscribers">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="member_id" ColumnName="member_id" />
+          <ScalarProperty Name="subscriber_name" ColumnName="subscriber_name" />
+          <ScalarProperty Name="pdf_subscription" ColumnName="pdf_subscription" />
+          <ScalarProperty Name="print_subscription" ColumnName="print_subscription" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="subscriber_postal_address" ColumnName="subscriber_postal_address" />
+          <ScalarProperty Name="subscriber_email_address" ColumnName="subscriber_email_address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_members">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.group_members">
+        <MappingFragment StoreEntitySet="group_members">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="member_id" ColumnName="member_id" />
+          <ScalarProperty Name="street_contact_status" ColumnName="street_contact_status" />
+          <ScalarProperty Name="membership_status" ColumnName="membership_status" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="last_updated_by" ColumnName="last_updated_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_setup_schedule">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.group_setup_schedule">
+        <MappingFragment StoreEntitySet="group_setup_schedule">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="enquiry_received_date" ColumnName="enquiry_received_date" />
+          <ScalarProperty Name="contact_firstname" ColumnName="contact_firstname" />
+          <ScalarProperty Name="contact_lastname" ColumnName="contact_lastname" />
+          <ScalarProperty Name="contact_address_unit_number" ColumnName="contact_address_unit_number" />
+          <ScalarProperty Name="contact_address_number" ColumnName="contact_address_number" />
+          <ScalarProperty Name="contact_address_name" ColumnName="contact_address_name" />
+          <ScalarProperty Name="contact_address_suburb" ColumnName="contact_address_suburb" />
+          <ScalarProperty Name="contact_address_postcode" ColumnName="contact_address_postcode" />
+          <ScalarProperty Name="contact_home_phone" ColumnName="contact_home_phone" />
+          <ScalarProperty Name="contact_cell_phone" ColumnName="contact_cell_phone" />
+          <ScalarProperty Name="contact_email" ColumnName="contact_email" />
+          <ScalarProperty Name="meeting_date" ColumnName="meeting_date" />
+          <ScalarProperty Name="setup_by_username" ColumnName="setup_by_username" />
+          <ScalarProperty Name="number_of_attendance" ColumnName="number_of_attendance" />
+          <ScalarProperty Name="setup_status" ColumnName="setup_status" />
+          <ScalarProperty Name="setup_remarks" ColumnName="setup_remarks" />
+          <ScalarProperty Name="follow_up_status" ColumnName="follow_up_status" />
+          <ScalarProperty Name="follow_up_by_username" ColumnName="follow_up_by_username" />
+          <ScalarProperty Name="follow_up_remarks" ColumnName="follow_up_remarks" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groups">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.group">
+        <MappingFragment StoreEntitySet="groups">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="group_name" ColumnName="group_name" />
+          <ScalarProperty Name="street_name" ColumnName="street_name" />
+          <ScalarProperty Name="suburb" ColumnName="suburb" />
+          <ScalarProperty Name="area_coordinator_id" ColumnName="area_coordinator_id" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="setup_by" ColumnName="setup_by" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="members">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.member">
+        <MappingFragment StoreEntitySet="members">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="physical_address_unit_number" ColumnName="physical_address_unit_number" />
+          <ScalarProperty Name="physical_address_number" ColumnName="physical_address_number" />
+          <ScalarProperty Name="physical_address_name" ColumnName="physical_address_name" />
+          <ScalarProperty Name="physical_address_suburb" ColumnName="physical_address_suburb" />
+          <ScalarProperty Name="physical_address_postcode" ColumnName="physical_address_postcode" />
+          <ScalarProperty Name="postal_address_number" ColumnName="postal_address_number" />
+          <ScalarProperty Name="postal_address_box_lobby_location" ColumnName="postal_address_box_lobby_location" />
+          <ScalarProperty Name="postal_address_suburb" ColumnName="postal_address_suburb" />
+          <ScalarProperty Name="postal_address_postcode" ColumnName="postal_address_postcode" />
+          <ScalarProperty Name="phone_home" ColumnName="phone_home" />
+          <ScalarProperty Name="phone_work" ColumnName="phone_work" />
+          <ScalarProperty Name="phone_cell" ColumnName="phone_cell" />
+          <ScalarProperty Name="email_address_default" ColumnName="email_address_default" />
+          <ScalarProperty Name="email_address_alternate" ColumnName="email_address_alternate" />
+          <ScalarProperty Name="signup_date" ColumnName="signup_date" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="ip_address" ColumnName="ip_address" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="emergency_volunteering_status" ColumnName="emergency_volunteering_status" />
+          <ScalarProperty Name="mailing_list_status" ColumnName="mailing_list_status" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+          <ScalarProperty Name="occupation" ColumnName="occupation" />
+          <ScalarProperty Name="other_remarks" ColumnName="other_remarks" />
+          <ScalarProperty Name="last_updated_date" ColumnName="last_updated_date" />
+          <ScalarProperty Name="last_updated_by" ColumnName="last_updated_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="members_backup">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.members_backup">
+        <MappingFragment StoreEntitySet="members_backup">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="physical_address_unit_number" ColumnName="physical_address_unit_number" />
+          <ScalarProperty Name="physical_address_number" ColumnName="physical_address_number" />
+          <ScalarProperty Name="physical_address_name" ColumnName="physical_address_name" />
+          <ScalarProperty Name="physical_address_suburb" ColumnName="physical_address_suburb" />
+          <ScalarProperty Name="physical_address_postcode" ColumnName="physical_address_postcode" />
+          <ScalarProperty Name="postal_address_number" ColumnName="postal_address_number" />
+          <ScalarProperty Name="postal_address_box_lobby_location" ColumnName="postal_address_box_lobby_location" />
+          <ScalarProperty Name="postal_address_suburb" ColumnName="postal_address_suburb" />
+          <ScalarProperty Name="postal_address_postcode" ColumnName="postal_address_postcode" />
+          <ScalarProperty Name="phone_home" ColumnName="phone_home" />
+          <ScalarProperty Name="phone_work" ColumnName="phone_work" />
+          <ScalarProperty Name="phone_cell" ColumnName="phone_cell" />
+          <ScalarProperty Name="email_address_default" ColumnName="email_address_default" />
+          <ScalarProperty Name="email_address_alternate" ColumnName="email_address_alternate" />
+          <ScalarProperty Name="signup_date" ColumnName="signup_date" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="ip_address" ColumnName="ip_address" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="emergency_volunteering_status" ColumnName="emergency_volunteering_status" />
+          <ScalarProperty Name="mailing_list_status" ColumnName="mailing_list_status" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+          <ScalarProperty Name="occupation" ColumnName="occupation" />
+          <ScalarProperty Name="other_remarks" ColumnName="other_remarks" />
+          <ScalarProperty Name="last_updated_date" ColumnName="last_updated_date" />
+          <ScalarProperty Name="last_updated_by" ColumnName="last_updated_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nz_stats">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.nz_stats">
+        <MappingFragment StoreEntitySet="nz_stats">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="suburb" ColumnName="suburb" />
+          <ScalarProperty Name="households" ColumnName="households" />
+          <ScalarProperty Name="data_year" ColumnName="data_year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nzaddress_type">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.nzaddress_type">
+        <MappingFragment StoreEntitySet="nzaddress_type">
+          <ScalarProperty Name="address_type_id" ColumnName="address_type_id" />
+          <ScalarProperty Name="address_type" ColumnName="address_type" />
+          <ScalarProperty Name="frequency" ColumnName="frequency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nzaddresses">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.nzaddress">
+        <MappingFragment StoreEntitySet="nzaddresses">
+          <ScalarProperty Name="streetid" ColumnName="streetid" />
+          <ScalarProperty Name="address_name" ColumnName="address_name" />
+          <ScalarProperty Name="address_type_id" ColumnName="address_type_id" />
+          <ScalarProperty Name="address_type" ColumnName="address_type" />
+          <ScalarProperty Name="address_range_from" ColumnName="address_range_from" />
+          <ScalarProperty Name="address_range_to" ColumnName="address_range_to" />
+          <ScalarProperty Name="suburb" ColumnName="suburb" />
+          <ScalarProperty Name="postcode" ColumnName="postcode" />
+          <ScalarProperty Name="oddeven" ColumnName="oddeven" />
+          <ScalarProperty Name="region_id" ColumnName="region_id" />
+          <ScalarProperty Name="auckland_city" ColumnName="auckland_city" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nzregions">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.nzregion">
+        <MappingFragment StoreEntitySet="nzregions">
+          <ScalarProperty Name="regionid" ColumnName="regionid" />
+          <ScalarProperty Name="region" ColumnName="region" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="params">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.param">
+        <MappingFragment StoreEntitySet="params">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="param1" ColumnName="param1" />
+          <ScalarProperty Name="param2" ColumnName="param2" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pobox_locations">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.pobox_locations">
+        <MappingFragment StoreEntitySet="pobox_locations">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="box_lobby" ColumnName="box_lobby" />
+          <ScalarProperty Name="suburb" ColumnName="suburb" />
+          <ScalarProperty Name="postcode" ColumnName="postcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="police_districts">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.police_districts">
+        <MappingFragment StoreEntitySet="police_districts">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="police_district" ColumnName="police_district" />
+          <ScalarProperty Name="community_constable" ColumnName="community_constable" />
+          <ScalarProperty Name="office_address" ColumnName="office_address" />
+          <ScalarProperty Name="email_address" ColumnName="email_address" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="nz_region_id" ColumnName="nz_region_id" />
+          <ScalarProperty Name="news_page_url" ColumnName="news_page_url" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="updated_by" ColumnName="updated_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="site_log">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.site_log">
+        <MappingFragment StoreEntitySet="site_log">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="first_accessed" ColumnName="first_accessed" />
+          <ScalarProperty Name="ip_address" ColumnName="ip_address" />
+          <ScalarProperty Name="last_accessed" ColumnName="last_accessed" />
+          <ScalarProperty Name="number_of_visits" ColumnName="number_of_visits" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="styles">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.style">
+        <MappingFragment StoreEntitySet="styles">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="style_name" ColumnName="style_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="suburbs_by_local_boards">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.suburbs_by_local_boards">
+        <MappingFragment StoreEntitySet="suburbs_by_local_boards">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="suburb" ColumnName="suburb" />
+          <ScalarProperty Name="local_board_id" ColumnName="local_board_id" />
+          <ScalarProperty Name="police_district" ColumnName="police_district" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="suspicious_vehicles">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.suspicious_vehicles">
+        <MappingFragment StoreEntitySet="suspicious_vehicles">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="logdatetime" ColumnName="logdatetime" />
+          <ScalarProperty Name="registration_number" ColumnName="registration_number" />
+          <ScalarProperty Name="vehicle_type" ColumnName="vehicle_type" />
+          <ScalarProperty Name="vehicle_colour" ColumnName="vehicle_colour" />
+          <ScalarProperty Name="vehicle_model" ColumnName="vehicle_model" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="passengers" ColumnName="passengers" />
+          <ScalarProperty Name="activity" ColumnName="activity" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="test_details">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.test_details">
+        <MappingFragment StoreEntitySet="test_details">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="test_id" ColumnName="test_id" />
+          <ScalarProperty Name="testaasdas" ColumnName="testaasdas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="test1">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.test1">
+        <MappingFragment StoreEntitySet="test1">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="test" ColumnName="test" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="useful_contacts">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.useful_contacts">
+        <MappingFragment StoreEntitySet="useful_contacts">
+          <ScalarProperty Name="recid" ColumnName="recid" />
+          <ScalarProperty Name="service_name" ColumnName="service_name" />
+          <ScalarProperty Name="service_phone_1" ColumnName="service_phone_1" />
+          <ScalarProperty Name="service_phone_2" ColumnName="service_phone_2" />
+          <ScalarProperty Name="service_email_1" ColumnName="service_email_1" />
+          <ScalarProperty Name="service_email_2" ColumnName="service_email_2" />
+          <ScalarProperty Name="service_url_1" ColumnName="service_url_1" />
+          <ScalarProperty Name="service_url_2" ColumnName="service_url_2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Applications">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.vw_aspnet_Applications">
+        <MappingFragment StoreEntitySet="vw_aspnet_Applications">
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_MembershipUsers">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.vw_aspnet_MembershipUsers">
+        <MappingFragment StoreEntitySet="vw_aspnet_MembershipUsers">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Profiles">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.vw_aspnet_Profiles">
+        <MappingFragment StoreEntitySet="vw_aspnet_Profiles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Roles">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.vw_aspnet_Roles">
+        <MappingFragment StoreEntitySet="vw_aspnet_Roles">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Users">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.vw_aspnet_Users">
+        <MappingFragment StoreEntitySet="vw_aspnet_Users">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_UsersInRoles">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.vw_aspnet_UsersInRoles">
+        <MappingFragment StoreEntitySet="vw_aspnet_UsersInRoles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_WebPartState_Paths">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.vw_aspnet_WebPartState_Paths">
+        <MappingFragment StoreEntitySet="vw_aspnet_WebPartState_Paths">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_WebPartState_Shared">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.vw_aspnet_WebPartState_Shared">
+        <MappingFragment StoreEntitySet="vw_aspnet_WebPartState_Shared">
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_WebPartState_User">
+      <EntityTypeMapping TypeName="NSAKLEntities_dbModel.vw_aspnet_WebPartState_User">
+        <MappingFragment StoreEntitySet="vw_aspnet_WebPartState_User">
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
